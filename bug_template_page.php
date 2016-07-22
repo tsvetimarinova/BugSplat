@@ -51,6 +51,7 @@ $query = "SELECT * FROM users, bugs WHERE bug_name = 'Accidental semicolon' AND 
 // execute the SQL query
 $result = mysql_query($query);
 if(!$result) die ("Could not query: " . mysql_error());
+$rows = mysql_num_rows($result);
 for($i = 0; $i < $rows; ++$i) {
     echo 'name: ' . mysql_result($result, $i, 'name') . '</br>';
     echo \n;
