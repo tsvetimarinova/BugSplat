@@ -38,8 +38,12 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 
 <?php
 
+
+
+
+
     // Retrieve the URL variables (using PHP).
-    $num = $_GET['var'];
+    $num = $_GET['$var'];
     echo "Number: " .$num;
 
 /*$query = "SELECT * FROM bugs";
