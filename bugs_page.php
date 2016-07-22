@@ -38,9 +38,9 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 <?php
     $var = 'Accidental semicolon';
     $b = 'Curly braces';
-    echo '<a href="http://bughelp.azurewebsites.net/test.php?bugs_page=$var">Accidental semicolon</a>';
+    echo '<a href="http://bughelp.azurewebsites.net/test.php?bugs_page='.$var.'">Accidental semicolon</a>';
     echo '<br/>';
-    echo '<a href="http://bughelp.azurewebsites.net/test.php?bugs_page=$var">Curly braces</a>';
+    echo '<a href="http://bughelp.azurewebsites.net/test.php?bugs_page='.$b.'">Curly braces</a>';
 ?>
 <!--<div class="container">
     <div class="starter-template">
