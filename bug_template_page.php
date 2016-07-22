@@ -29,11 +29,6 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     <li class="active"><a href = "http://bughelp.azurewebsites.net/bugs_page.php"> Bugs Page </a></li>
 </div>
 
-<div class="container">
-    <div class="starter-template">
-        <h1>Accidental semicolon</h1>
-    </div>
-</div><!-- /.container -->
 
 
 <?php
@@ -47,8 +42,13 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 
 
 // Retrieve the URL variables (using PHP).
-$num = $_GET['name'];
-echo "Number: " .$num;
+$name = $_GET['name'];
+echo $name;
+
+$query = "SELECT (users.name, users.email, users.country) FROM users, bugs WHERE bug_name = $name AND users.userID = bugs.userID";
+echo $query;
+
+
 
 /*$query = "SELECT * FROM bugs";
 // execute the SQL query
