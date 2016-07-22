@@ -36,11 +36,23 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 </div>
 
 <?php
-    $var = 'Accidental semicolon';
+    $query = "SELECT * FROM bugs";
+    // execute the SQL query
+    $result = mysql_query($query);
+    if(!$result) die ("Could not query: " . mysql_error());
+    $rows = mysql_num_rows($result);
+    for($i = 0; $i < $rows; ++$i){
+        $var = mysql_result($result, $i, 'bug_name') . '</br>';
+        echo '<a href="http://bughelp.azurewebsites.net/test.php?name='.$var.'">'.$var.'</a>';
+    }
+
+
+   /* $var = 'Accidental semicolon';
     $b = 'Curly braces';
     echo '<a href="http://bughelp.azurewebsites.net/test.php?name='.$var.'">'.$var.'</a>';
     echo '<br/>';
     echo '<a href="http://bughelp.azurewebsites.net/test.php?name='.$b.'">Curly braces</a>';
+   */
 ?>
 <!--<div class="container">
     <div class="starter-template">
