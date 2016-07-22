@@ -38,7 +38,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 
 <?php
 
-    if ($_GET['bugs_page']=="Accidental semicolon"){
+    if ($_GET['bugs_page']== $var){
     echo "link 1";
     } else {
         echo "link 2";
