@@ -43,7 +43,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     $rows = mysql_num_rows($result);
     for($i = 0; $i < $rows; ++$i){
         $var = mysql_result($result, $i, 'bug_name') . '</br>';
-        echo '<a href="http://bughelp.azurewebsites.net/test.php?name='.$var.'">'.$var.'</a>';
+        echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$var.'">'.$var.'</a>';
     }
 
 
