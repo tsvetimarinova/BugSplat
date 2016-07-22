@@ -43,7 +43,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 
 
         <!-- Send the variables myNumber=1 and myFruit="orange" to the new PHP page...-->
-        <a href="http://bughelp.azurewebsites.net/test.php?link=var">Send variables via URL!</a>
+        <a href="http://bughelp.azurewebsites.net/test.php?bugs_page=var">Send variables via URL!</a>
         </script>
         <!--<li><a href = "http://bughelp.azurewebsites.net/test.php"> Accidental semicolon </a></li> -->
         <li><a href = "http://bughelp.azurewebsites.net/curly_braces.php"> Curly braces </a></li>
