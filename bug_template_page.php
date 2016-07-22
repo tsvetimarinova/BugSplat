@@ -47,16 +47,17 @@ echo $name;
 
 
 
-$query = "SELECT * FROM users, bugs WHERE bug_name = '.$name.' AND users.userID = bugs.userID";
+$query = "SELECT name,email, country FROM users, bugs WHERE bug_name = '".$name."' AND users.userID = bugs.userID";
 // execute the SQL query
 $result = mysql_query($query);
 if(!$result) die ("Could not query: " . mysql_error());
-$rows = mysql_num_rows($result);
+echo $result;
+/*$rows = mysql_num_rows($result);
 for($i = 0; $i < $rows; ++$i) {
     echo 'name: ' . mysql_result($result, $i, 'name') . '</br>';
     echo 'email: ' . mysql_result($result, $i, 'email') . '</br>';
     echo 'country: ' . mysql_result($result, $i, 'country') . '</br>';
-}
+}*/
 
 
 /*$query = "SELECT * FROM bugs";
