@@ -35,20 +35,25 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     </div>
 </div>
 
-<div class="container">
+<?php
+    $var = 'Accidental semicolon';
+    echo '<a href="http://bughelp.azurewebsites.net/test.php?bugs_page=$var">Accidental semicolon</a>';
+?>
+<!--<div class="container">
     <div class="starter-template">
 
-        <script type="text/javascript">
         var=10;
 
-        </script>
+
         <!-- Send the variables myNumber=1 and myFruit="orange" to the new PHP page...-->
-        <a href="http://bughelp.azurewebsites.net/test.php?var">Send variables via URL!</a>
+        <!--<a href="http://bughelp.azurewebsites.net/test.php?var">Send variables via URL!</a>
+
 
         <!--<li><a href = "http://bughelp.azurewebsites.net/test.php"> Accidental semicolon </a></li> -->
-        <li><a href = "http://bughelp.azurewebsites.net/curly_braces.php"> Curly braces </a></li>
+       <!-- <li><a href = "http://bughelp.azurewebsites.net/curly_braces.php"> Curly braces </a></li>
     </div>
 </div>
+-->
 <?php
 
 
