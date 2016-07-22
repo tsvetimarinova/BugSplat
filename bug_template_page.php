@@ -38,14 +38,20 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 //  } else {
 //      echo "link 2";
 //  }
+$db_database = 'databasebug1300608';
+$db_hostname = 'us-cdbr-azure-west-c.cloudapp.net';
+$db_username = 'b4bbf8767a3b3c';
+$db_password = '7ae9ed4b';
 
-
-
+$con = mysqli_connect($db_hostname,$db_username,$db_password,$db_database);
+if(!$db_server) die("Unable to connect to MYSQL: ". mysql_error());
+mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_error());
     // Retrieve the URL variables (using PHP).
 $name = $_GET['name'];
 echo $name;
 
-$query = "SELECT * FROM users, bugs WHERE bug_name = '$name' AND users.userID = bugs.userID";
+$query = mysqli_query($con, "SELECT * FROM users, bugs WHERE bug_name = '".$name."' AND users.userID = bugs.userID");
+//$query = "SELECT * FROM users, bugs WHERE bug_name = '$name' AND users.userID = bugs.userID";
 // execute the SQL query
 $result = mysql_query($query);
 if(!$result) die ("Could not query: " . mysql_error());
