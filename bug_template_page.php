@@ -54,9 +54,7 @@ if(!$result) die ("Could not query: " . mysql_error());
 $rows = mysql_num_rows($result);
 for($i = 0; $i < $rows; ++$i) {
     echo 'name: ' . mysql_result($result, $i, 'name') . '</br>';
-    echo \n;
     echo 'email: ' . mysql_result($result, $i, 'email') . '</br>';
-    echo \n;
     echo 'country: ' . mysql_result($result, $i, 'country') . '</br>';
 }
 
