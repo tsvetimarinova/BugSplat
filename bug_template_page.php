@@ -51,15 +51,13 @@ $query = "SELECT * FROM users, bugs WHERE bug_name = $name AND users.userID = bu
 // execute the SQL query
 $result = mysql_query($query);
 if(!$result) die ("Could not query: " . mysql_error());
-$rows = mysql_num_rows($result);
-for($i = 0; $i < $rows; ++$i)
-{
-    echo ' ' . mysql_result($result, $i, 'name' ) . '</br>';
+
+    echo 'name: ' . mysql_result($result, 'name' ) . '</br>';
     echo \n;
-    echo ' ' . mysql_result($result, $i, 'email' ) . '</br>';
+    echo 'email: ' . mysql_result($result, 'email' ) . '</br>';
     echo \n;
-    echo ' ' . mysql_result($result, $i, 'country' ) . '</br>';
-}
+    echo 'country: ' . mysql_result($result, 'country' ) . '</br>';
+
 
 
 /*$query = "SELECT * FROM bugs";
