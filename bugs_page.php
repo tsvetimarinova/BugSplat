@@ -38,7 +38,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 <div class="container">
     <div class="starter-template">
 
-        $var = "Accidental semicolon"
+        $var = "Accidental semicolon";
 
         <!-- Send the variables myNumber=1 and myFruit="orange" to the new PHP page...-->
         <a href="http://bughelp.azurewebsites.net/test.php?var">Send variables via URL!</a>
