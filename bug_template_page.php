@@ -45,9 +45,21 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 $name = $_GET['name'];
 echo $name;
 
-$query = "SELECT (users.name, users.email, users.country) FROM users, bugs WHERE bug_name = $name AND users.userID = bugs.userID";
-echo $query;
 
+
+$query = "SELECT * FROM users, bugs WHERE bug_name = $name AND users.userID = bugs.userID";
+// execute the SQL query
+$result = mysql_query($query);
+if(!$result) die ("Could not query: " . mysql_error());
+$rows = mysql_num_rows($result);
+for($i = 0; $i < $rows; ++$i)
+{
+    echo ' ' . mysql_result($result, $i, 'name' ) . '</br>';
+    echo \n;
+    echo ' ' . mysql_result($result, $i, 'email' ) . '</br>';
+    echo \n;
+    echo ' ' . mysql_result($result, $i, 'country' ) . '</br>';
+}
 
 
 /*$query = "SELECT * FROM bugs";
