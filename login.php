@@ -23,7 +23,7 @@ if (isset($_POST['bttLogin'])){
             <td><input type="password" name="password"></td>
         </tr>
         <tr>
-            <td>$submit</td>
+            <td></td>
             <td><input type="submit" name="bttLogin" value="Login"></td>
         </tr>
     </table>
