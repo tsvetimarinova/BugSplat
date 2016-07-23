@@ -42,7 +42,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 
 
     // Retrieve the URL variables (using PHP).
-    $name = $_GET[$var];
+    $name = $_GET['name'];
     echo $name;
 
 
