@@ -73,7 +73,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 
 
 
-$query = "SELECT * FROM bugs";
+/*$query = "SELECT * FROM bugs";
 // execute the SQL query
 $result = mysql_query($query);
 if(!$result) die ("Could not query: " . mysql_error());
@@ -82,7 +82,7 @@ for($j = 0; $j < $rows; ++$j)
 {
     // echo ' ' . mysql_result($result, $j, 'bug_name') . '</br>';
     /* echo 'Description: ' . mysql_result($result, $j, 'bug_description') . '</br>'; */
-}
+//}
 // iterate over $result object one $row at a time
 // use fetch_array() to return an associative array
 //while($row = $result->fetch_array()){
