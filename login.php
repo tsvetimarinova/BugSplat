@@ -18,14 +18,15 @@ if (isset($_POST['bttReg'])){
     $result2 = mysqli_query($con, 'select * from users where username = "'.$username1.'"');
     if (mysqli_num_rows($result2)==1 ){
         echo "Username already exists.";
+    } else {
+        $password1 = $_POST['password1'];
+        $fullname = $_POST['fullname'];
+        $email = $_POST['email'];
+        $country = $_POST['country'];
+        $result1 = mysqli_query($con, 'insert into users (userID, name, email, country, developer, privID, username, password) values("U007", ' . $fullname . ',' . $email . ',' . $country . ',"1", "PR01", ' . $username1 . ', ' . $password1 . ' )');
+        $_SESSION['username1'] = $username1;
+        header('Location: home_page.html');
     }
-    $password1 = $_POST['password1'];
-    $fullname = $_POST['fullname'];
-    $email = $_POST['email'];
-    $country = $_POST['country'];
-    $result1 = mysqli_query($con, 'insert into users (userID, name, email, country, developer, privID, username, password) values("U007", '.$fullname.','.$email.','.$country.',"1", "PR01", '.$username1.', '.$password1.' )');
-    $_SESSION['username1'] = $username1;
-    header('Location: home_page.html');
 }
 ?>
 
