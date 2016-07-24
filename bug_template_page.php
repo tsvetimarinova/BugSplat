@@ -92,27 +92,8 @@ for($j = 0; $j < $rows; ++$j)
 $result->close();
 // close connection to database
 $db->close();
-
-
 ?>
 
-
-
-
-
-
-<!--<h1>Leave a comment here:</h1>
-<form  method="post">
-    Comment:<br />
-    <textarea name='comment'></textarea><br />
-    <input type='hidden' name='articleid' />
-    <input type='submit' value='Submit' />
-</form>
--->
-</body>
-</html>
-<html>
-<body>
 <form>
     <fieldset>
         <legend>Please leave a comment...</legend>
@@ -128,5 +109,11 @@ $db->close();
         <input type="submit" value="Submit" />
     </fieldset>
 </form>
+
+
+
+
+
 </body>
 </html>
+
