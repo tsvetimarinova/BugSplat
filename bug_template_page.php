@@ -60,17 +60,17 @@ if (isset($_GET['name'])) {
     require 'connect.php';
     $name = $_GET['name'];
     echo $name;
-    $result = mysql_query( 'select * from bugs, users where bug_name = "' . $name . '" and users.userID = bugs.userID');
+    $result1 = mysql_query($con, 'select * from bugs, users where bug_name = "' . $name . '" and users.userID = bugs.userID');
 // execute the SQL query
 //$result = mysql_query($query);
-    if (!$result) die ("Could not query: " . mysql_error());
+    if (!$result1) die ("Could not query: " . mysql_error());
     echo $rows;
-    $rows = mysql_num_rows($result);
+    $rows = mysql_num_rows($result1);
 //echo $rows;
     for ($i = 0; $i < $rows; ++$i) {
-        echo 'name: ' . mysql_result($result, $i, 'name') . '</br>';
-        echo 'email: ' . mysql_result($result, $i, 'email') . '</br>';
-        echo 'country: ' . mysql_result($result, $i, 'country') . '</br>';
+        echo 'name: ' . mysql_result($result1, $i, 'name') . '</br>';
+        echo 'email: ' . mysql_result($result1, $i, 'email') . '</br>';
+        echo 'country: ' . mysql_result($result1, $i, 'country') . '</br>';
     }
 
 
