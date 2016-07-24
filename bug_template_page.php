@@ -12,14 +12,14 @@
 //    die("Connection failed: " . $conn->connect_error);
 //}
 
-$db_database = 'databasebug1300608';
+/*$db_database = 'databasebug1300608';
 $db_hostname = 'us-cdbr-azure-west-c.cloudapp.net';
 $db_username = 'b4bbf8767a3b3c';
 $db_password = '7ae9ed4b';
 $db_server = mysql_connect($db_hostname, $db_username, $db_password);
 if(!$db_server) die("Unable to connect to MYSQL: ". mysql_error());
 mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_error());
-
+*/
 ?>
 <html>
 <body>
