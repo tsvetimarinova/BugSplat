@@ -15,7 +15,8 @@ if (isset($_POST['bttLogin'])){
 
 
 <form method="post">
-    <table cellpadding="2" cellspacing="2" border="1">
+    <fieldset>
+    <table cellpadding="2" cellspacing="2" border="0">
         <tr>
             <td>Username:</td>
             <td><input type="text" name="username"></td>
@@ -29,12 +30,14 @@ if (isset($_POST['bttLogin'])){
             <td><input type="submit" name="bttLogin" value="Login"></td>
         </tr>
     </table>
+    </fieldset>
 </form>
 
 
 
 <form method="post">
-    <table cellpadding="2" cellspacing="2" border="1">
+    <fieldset>
+    <table cellpadding="2" cellspacing="2" border="0">
         <tr>
             <td>Username:</td>
             <td><input type="text" name="username"></td>
@@ -60,4 +63,5 @@ if (isset($_POST['bttLogin'])){
             <td><input type="submit" name="bttLogin" value="Register"></td>
         </tr>
     </table>
+    </fieldset>
 </form>
