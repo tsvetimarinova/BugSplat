@@ -12,6 +12,8 @@ if (isset($_POST['bttLogin'])){
     else echo "Account is invalid";
 }
 ?>
+
+
 <form method="post">
     <table cellpadding="2" cellspacing="2" border="0">
         <tr>
@@ -25,6 +27,37 @@ if (isset($_POST['bttLogin'])){
         <tr>
             <td></td>
             <td><input type="submit" name="bttLogin" value="Login"></td>
+        </tr>
+    </table>
+</form>
+
+
+
+<form method="post">
+    <table cellpadding="2" cellspacing="2" border="0">
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td>Full name:</td>
+            <td><input type="text" name="fullname"></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <td>Country:</td>
+            <td><input type="text" name="country"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="bttLogin" value="Register"></td>
         </tr>
     </table>
 </form>
