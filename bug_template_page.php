@@ -54,6 +54,7 @@ $result = mysql_query('SELECT * FROM users, bugs WHERE bug_name = "'.$name.'" AN
 // execute the SQL query
 //$result = mysql_query($query);
 if(!$result) die ("Could not query: " . mysql_error());
+echo $name;
 $rows = mysql_num_rows($result);
 echo $rows;
 for($i = 0; $i < $rows; ++$i) {
