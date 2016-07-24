@@ -55,12 +55,18 @@ $result = mysql_query("SELECT * FROM users, bugs WHERE bug_name = 'Accidental se
 //$result = mysql_query($query);
 if(!$result) die ("Could not query: " . mysql_error());
 $rows = mysql_num_rows($result);
-echo $rows;
+//echo $rows;
 for($i = 0; $i < $rows; ++$i) {
     echo 'name: ' . mysql_result($result, $i, 'name') . '</br>';
     echo 'email: ' . mysql_result($result, $i, 'email') . '</br>';
     echo 'country: ' . mysql_result($result, $i, 'country') . '</br>';
 }
+
+
+$com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = 'Accidental semicolon' AND commments.bugID = bugs.bugID");
+echo $com;
+
+
 
 
 /*$query = "SELECT * FROM bugs";
