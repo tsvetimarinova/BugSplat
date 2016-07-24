@@ -44,7 +44,7 @@ if (isset($_POST['bttReg'])){
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" name="bttReg" value="Login"></td>
+            <td><input type="submit" name="bttLogin" value="Login"></td>
         </tr>
     </table>
     </fieldset>
@@ -78,7 +78,7 @@ if (isset($_POST['bttReg'])){
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" name="bttLogin" value="Register"></td>
+            <td><input type="submit" name="bttReg" value="Register"></td>
         </tr>
     </table>
     </fieldset>
