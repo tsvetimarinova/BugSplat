@@ -96,7 +96,7 @@ $db->close();
 
 ?>
 
-<form action="/html/tags/html_form_tag_action.cfm" method="post">
+<form method="post">
     <div>
 <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
 
