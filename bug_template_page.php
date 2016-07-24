@@ -100,7 +100,7 @@ $db->close();
 <h1>Leave a comment here:</h1>
 <form  method="post">
     Comment:<br />
-    <textarea name='comment' id='comment'></textarea><br />
+    <textarea name='comment'></textarea><br />
     <input type='hidden' name='articleid' />
     <input type='submit' value='Submit' />
 </form>
