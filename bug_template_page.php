@@ -42,17 +42,17 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 
 
     // Retrieve the URL variables (using PHP).
-    //$name = $_GET['name'];
-    $name = $_SESSION [$name];
+    $name = $_GET['name'];
+    //$name = $_SESSION [$name];
     echo $name;
     session_start();
     echo 'Welcome '.$_SESSION[$name];
 
 
 
-$query = mysql_query($con,'SELECT * FROM users, bugs WHERE bug_name = "'.$name.'" AND users.userID = bugs.userID');
+$query = mysqi_query($con,'SELECT * FROM users, bugs WHERE bug_name = "'.$name.'" AND users.userID = bugs.userID');
 // execute the SQL query
-$result = mysql_query($query);
+$result = mysqli_query($query);
 if(!$result) die ("Could not query: " . mysql_error());
 $rows = mysql_num_rows($result);
 echo $rows;
