@@ -56,27 +56,28 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     session_start();
     echo 'Welcome '.$_SESSION[$name];
     echo $name;
-
-require 'connect.php';
-$result = mysqli_query($con, 'select * from users, bugs where bug_name = "'.$name.'" and users.userID = bugs.userID');
+//if (isset($_GET['name'])) {
+    require 'connect.php';
+    $result = mysqli_query($con, 'select * from users inner join bugs where bug_name = "' . $name . '" and users.userID = bugs.userID');
 // execute the SQL query
 //$result = mysql_query($query);
-if(!$result) die ("Could not query: " . mysql_error());
-$rows = mysql_num_rows($result);
+    if (!$result) die ("Could not query: " . mysql_error());
+    $rows = mysql_num_rows($result);
 //echo $rows;
-for($i = 0; $i < $rows; ++$i) {
-    echo 'name: ' . mysql_result($result, $i, 'name') . '</br>';
-    echo 'email: ' . mysql_result($result, $i, 'email') . '</br>';
-    echo 'country: ' . mysql_result($result, $i, 'country') . '</br>';
-}
+    for ($i = 0; $i < $rows; ++$i) {
+        echo 'name: ' . mysql_result($result, $i, 'name') . '</br>';
+        echo 'email: ' . mysql_result($result, $i, 'email') . '</br>';
+        echo 'country: ' . mysql_result($result, $i, 'country') . '</br>';
+    }
 
 
-$com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = 'Accidental semicolon' AND comments.bugID = bugs.bugID");
-if(!$com) die ("Could not query: " . mysql_error());
-$rows1 = mysql_num_rows($com);
-for($i = 0; $i < $rows1; ++$i) {
-    echo 'Comment: ' . mysql_result($com, $i, 'com_description') . '</br>';
-}
+    $com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = 'Accidental semicolon' AND comments.bugID = bugs.bugID");
+    if (!$com) die ("Could not query: " . mysql_error());
+    $rows1 = mysql_num_rows($com);
+    for ($i = 0; $i < $rows1; ++$i) {
+        echo 'Comment: ' . mysql_result($com, $i, 'com_description') . '</br>';
+    }
+//}
 
 /*$query = "SELECT * FROM bugs";
 // execute the SQL query
