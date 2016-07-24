@@ -50,9 +50,9 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 
 
 
-$query = mysql_query($con,'SELECT * FROM users, bugs WHERE bug_name = "'.$_SESSION[$name].'" AND users.userID = bugs.userID');
+$result = mysql_query($con,'SELECT * FROM users, bugs WHERE bug_name = "'.$_SESSION[$name].'" AND users.userID = bugs.userID');
 // execute the SQL query
-$result = mysql_query($query);
+//$result = mysql_query($query);
 if(!$result) die ("Could not query: " . mysql_error());
 $rows = mysql_num_rows($result);
 echo $rows;
