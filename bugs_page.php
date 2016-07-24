@@ -40,8 +40,8 @@ session_start();
 
     $query = "SELECT * FROM bugs";
     // execute the SQL query
-    $result = mysqli_query($query);
-    if(!$result) die ("Could not query: " . mysqli_error());
+    $result = mysql_query($query);
+    if(!$result) die ("Could not query: " . mysql_error());
     $rows = mysql_num_rows($result);
     for($i = 0; $i < $rows; ++$i){
         $var = mysqli_result($result, $i, 'bug_name') . '</br>';
