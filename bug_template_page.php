@@ -58,7 +58,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     //echo $name;
 if (isset($_GET['name'])) {
     require 'connect.php';
-    $name = $_POST['name'];
+    $name = $_GET['name'];
     $result = mysqli_query($con, 'select * from users, bugs where bug_name = "' . $name . '" and users.userID = bugs.userID');
 // execute the SQL query
 //$result = mysql_query($query);
