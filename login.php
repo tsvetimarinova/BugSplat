@@ -23,9 +23,10 @@ if (isset($_POST['bttReg'])){
         $fullname = $_POST['fullname'];
         $email = $_POST['email'];
         $country = $_POST['country'];
-        $result1 = mysql_query('insert into users (userID, name, email, country, developer, admin, privID, username, password) values("U007", "'.$fullname.'", "'.$email.'","'.$country.'","1","0", "PR01", "'.$username1.'", "'.$password1.'")');
+        $result1 = mysql_query($con, 'insert into users (userID, name, email, country, developer, admin, privID, username, password) values("U007", "'.$fullname.'", "'.$email.'","'.$country.'","1","0", "PR01", "'.$username1.'", "'.$password1.'")');
         if (!$result1) die ("Could not query: " . mysql_error());
         else echo "Success";
+        mysql_close($con);
         $_SESSION['username1'] = $username1;
        // header('Location: home_page.html');
     }
