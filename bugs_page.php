@@ -44,7 +44,7 @@ session_start();
     if(!$result) die ("Could not query: " . mysql_error());
     $rows = mysql_num_rows($result);
     for($i = 0; $i < $rows; ++$i){
-        $var = mysqli_result($result, $i, 'bug_name') . '</br>';
+        $var = mysql_result($result, $i, 'bug_name') . '</br>';
         //$_SESSION ['']= $var;
         echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$var.'">'.$var.'</a>';
     }
