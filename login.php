@@ -12,7 +12,7 @@ if (isset($_POST['bttLogin'])){
     else echo "Account is invalid";
 }
 
-if (isset($_POST['bbtReg'])){
+if (isset($_POST['bttReg'])){
     require 'connect.php';
     $username1 = $_POST['username1'];
     $result2 = mysqli_query($con, 'select * from users where username = "'.$username.'"');
