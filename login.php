@@ -11,6 +11,22 @@ if (isset($_POST['bttLogin'])){
     }
     else echo "Account is invalid";
 }
+
+if (isset($_POST['bbtReg'])){
+    require 'connect.php';
+    $username1 = $_POST['username1'];
+    $result2 = mysqli_query($con, 'select * from users where username = "'.$username.'"');
+    if (mysqli_num_rows($result2)==1 ){
+        echo "Username already exists.";
+    }
+    $password1 = $_POST['password1'];
+    $fullname = $_POST['fullname'];
+    $email = $_POST['email'];
+    $country = $_POST['country'];
+    $result1 = mysqli_query($con, 'insert into users (userID, name, email, country, developer, privID, username, password) values("U007", '.$fullname.','.$email.','.$country.',"1", "PR01", '.$username1.', '.$password1.' )');
+    $_SESSION['username1'] = $username1;
+    header('Location: home_page.html');
+}
 ?>
 
 
@@ -28,7 +44,7 @@ if (isset($_POST['bttLogin'])){
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" name="bttLogin" value="Login"></td>
+            <td><input type="submit" name="bttReg" value="Login"></td>
         </tr>
     </table>
     </fieldset>
@@ -42,11 +58,11 @@ if (isset($_POST['bttLogin'])){
     <table cellpadding="2" cellspacing="2" border="0">
         <tr>
             <td>Username:</td>
-            <td><input type="text" name="username"></td>
+            <td><input type="text" name="username1"></td>
         </tr>
         <tr>
             <td>Password:</td>
-            <td><input type="password" name="password"></td>
+            <td><input type="password" name="password1"></td>
         </tr>
         <tr>
             <td>Full name:</td>
