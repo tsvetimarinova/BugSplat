@@ -46,6 +46,7 @@ session_start();
     for($i = 0; $i < $rows; ++$i){
         $var = mysql_result($result, $i, 'bug_name') . '</br>';
         $_SESSION ['bug']= mysql_result($result, $i, 'bug_name') . '</br>';
+        echo $_SESSION ['bug'];
         echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$var.'">'.$var.'</a>';
     }
 
