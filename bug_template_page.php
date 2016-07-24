@@ -33,10 +33,9 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 <form>
     <fieldset>
         <legend>Please leave a comment...</legend>
-        <label for="comments">Comment:</label>
         <textarea name="comments" cols="45" rows="5"></textarea>
         <br>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Comment" />
     </fieldset>
 </form>
 
