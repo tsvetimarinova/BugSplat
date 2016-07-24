@@ -56,11 +56,11 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     session_start();
     //echo 'Welcome '.$_SESSION[$name];
     //echo $name;
-if (isset($_POST['name'])) {
+if (isset($_GET['name'])) {
     require 'connect.php';
     $name = $_GET['name'];
     echo $name;
-    $result = mysqli_query($con, 'select * from users, bugs where bug_name = "' . $name . '" and users.userID = bugs.userID');
+    $result = mysqli_query($con, 'select * from bugs, users where bug_name = "' . $name . '" and users.userID = bugs.userID');
 // execute the SQL query
 //$result = mysql_query($query);
     if (!$result) die ("Could not query: " . mysql_error());
