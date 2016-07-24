@@ -45,7 +45,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     $name = $_GET['name'];
     echo $name;
     session_start();
-    echo 'Welcome '.$_SESSION['bug'];
+    echo 'Welcome '.$_SESSION['$var'];
 
 
 
