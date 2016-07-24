@@ -63,11 +63,11 @@ for($i = 0; $i < $rows; ++$i) {
 }
 
 
-$com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = 'Accidental semicolon' AND commments.bugID = bugs.bugID");
+$com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = 'Accidental semicolon' AND comments.bugID = bugs.bugID");
 echo $com;
 if(!$com) die ("Could not query: " . mysql_error());
 $rows1 = mysql_num_rows($com);
-//echo $rows;
+echo $rows;
 
 
 
