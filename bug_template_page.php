@@ -56,7 +56,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     session_start();
     //echo 'Welcome '.$_SESSION[$name];
     //echo $name;
-if (isset($_GET['name'])) {
+if (isset($_POST['name'])) {
     require 'connect.php';
     $name = $_GET['name'];
     echo $name;
