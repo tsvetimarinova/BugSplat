@@ -56,11 +56,11 @@ $result = mysql_query("SELECT * FROM users, bugs WHERE bug_name = '.$name.' AND 
 if(!$result) die ("Could not query: " . mysql_error());
 $rows = mysql_num_rows($result);
 echo $rows;
-/*for($i = 0; $i < $rows; ++$i) {
+for($i = 0; $i < $rows; ++$i) {
     echo 'name: ' . mysql_result($result, $i, 'name') . '</br>';
     echo 'email: ' . mysql_result($result, $i, 'email') . '</br>';
     echo 'country: ' . mysql_result($result, $i, 'country') . '</br>';
-}*/
+}
 
 
 /*$query = "SELECT * FROM bugs";
