@@ -50,16 +50,16 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     echo $name;
 
 
-$result = mysql_query("SELECT * FROM users, bugs WHERE bug_name = ".$name." AND users.userID = bugs.userID");
+$result = mysql_query("SELECT * FROM users, bugs WHERE bug_name ='".$name."' AND users.userID = bugs.userID");
 // execute the SQL query
 //$result = mysql_query($query);
 if(!$result) die ("Could not query: " . mysql_error());
 $rows = mysql_num_rows($result);
 echo $rows;
 for($i = 0; $i < $rows; ++$i) {
-    echo 'name: ' . mysqli_result($result, $i, 'name') . '</br>';
-    echo 'email: ' . mysqli_result($result, $i, 'email') . '</br>';
-    echo 'country: ' . mysqli_result($result, $i, 'country') . '</br>';
+    echo 'name: ' . mysql_result($result, $i, 'name') . '</br>';
+    echo 'email: ' . mysql_result($result, $i, 'email') . '</br>';
+    echo 'country: ' . mysql_result($result, $i, 'country') . '</br>';
 }
 
 
