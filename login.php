@@ -15,7 +15,7 @@ if (isset($_POST['bttLogin'])){
 if (isset($_POST['bttReg'])){
     require 'connect.php';
     $username1 = $_POST['username1'];
-    $result2 = mysqli_query($con, 'select * from users where username = "'.$username.'"');
+    $result2 = mysqli_query($con, 'select * from users where username = "'.$username1.'"');
     if (mysqli_num_rows($result2)==1 ){
         echo "Username already exists.";
     }
