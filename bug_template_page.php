@@ -53,7 +53,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 $result = mysqli_query('SELECT * FROM users, bugs WHERE bug_name = "'.$name.'" AND users.userID = bugs.userID');
 // execute the SQL query
 //$result = mysql_query($query);
-if(!$result) die ("Could not query: " . mysqli_error());
+if(!$result) die ("Could not query: " . mysql_error());
 $rows = mysql_num_rows($result);
 echo $rows;
 /*for($i = 0; $i < $rows; ++$i) {
