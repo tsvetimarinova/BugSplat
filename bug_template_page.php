@@ -28,21 +28,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     <li class="active"><a href = "http://bughelp.azurewebsites.net/Home_page.html"> Home Page </a></li>
     <li class="active"><a href = "http://bughelp.azurewebsites.net/bugs_page.php"> Bugs Page </a></li>
 </div>
-<form>
-    <fieldset>
-        <legend>Please leave a comment...</legend>
-        <label for="name">Name:</label>
-        <input type="text" name="name" value="" />
-        <br>
-        <label for="email">Email:</label>
-        <input type="text" name="email" value="" />
-        <br>
-        <label for="comments">Comment:</label>
-        <textarea name="comments" cols="45" rows="5"></textarea>
-        <br>
-        <input type="submit" value="Submit" />
-    </fieldset>
-</form>
+
 
 
 <?php
@@ -123,5 +109,24 @@ $db->close();
     <input type='submit' value='Submit' />
 </form>
 -->
+</body>
+</html>
+<html>
+<body>
+<form>
+    <fieldset>
+        <legend>Please leave a comment...</legend>
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="" />
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" name="email" value="" />
+        <br>
+        <label for="comments">Comment:</label>
+        <textarea name="comments" cols="45" rows="5"></textarea>
+        <br>
+        <input type="submit" value="Submit" />
+    </fieldset>
+</form>
 </body>
 </html>
