@@ -63,14 +63,12 @@ for($i = 0; $i < $rows; ++$i) {
 }
 
 
-$com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = '".$name."' AND comments.bugID = bugs.bugID");
+$com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = 'Accidental semicolon' AND comments.bugID = bugs.bugID");
 if(!$com) die ("Could not query: " . mysql_error());
 $rows1 = mysql_num_rows($com);
 for($i = 0; $i < $rows1; ++$i) {
     echo 'Comment: ' . mysql_result($com, $i, 'com_description') . '</br>';
 }
-
-
 
 /*$query = "SELECT * FROM bugs";
 // execute the SQL query
@@ -97,5 +95,14 @@ $db->close();
 
 
 ?>
+
+
+<h1>Leave a comment here:</h1>
+<form  method="post">
+    Comment:<br />
+    <textarea name='comment' id='comment'></textarea><br />
+    <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+    <input type='submit' value='Submit' />
+</form>
 </body>
 </html>
