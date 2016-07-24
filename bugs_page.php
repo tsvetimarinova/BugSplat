@@ -40,11 +40,12 @@ session_start();
 
     $query = "SELECT * FROM bugs";
     // execute the SQL query
-    $result = mysql_query($query);
-    if(!$result) die ("Could not query: " . mysql_error());
+    $result = mysqli_query($query);
+    if(!$result) die ("Could not query: " . mysqli_error());
     $rows = mysql_num_rows($result);
     for($i = 0; $i < $rows; ++$i){
-        $var = mysql_result($result, $i, 'bug_name') . '</br>';
+        $var = mysqli_result($result, $i, 'bug_name') . '</br>';
+        //$_SESSION ['']= $var;
         echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$var.'">'.$var.'</a>';
     }
 
