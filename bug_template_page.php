@@ -30,6 +30,21 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 </div>
 
 
+<form>
+    <fieldset>
+        <legend>Please leave a comment...</legend>
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="" />
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" name="email" value="" />
+        <br>
+        <label for="comments">Comment:</label>
+        <textarea name="comments" cols="45" rows="5"></textarea>
+        <br>
+        <input type="submit" value="Submit" />
+    </fieldset>
+</form>
 
 <?php
 
@@ -92,23 +107,9 @@ for($j = 0; $j < $rows; ++$j)
 $result->close();
 // close connection to database
 $db->close();
+
 ?>
 
-<form>
-    <fieldset>
-        <legend>Please leave a comment...</legend>
-        <label for="name">Name:</label>
-        <input type="text" name="name" value="" />
-        <br>
-        <label for="email">Email:</label>
-        <input type="text" name="email" value="" />
-        <br>
-        <label for="comments">Comment:</label>
-        <textarea name="comments" cols="45" rows="5"></textarea>
-        <br>
-        <input type="submit" value="Submit" />
-    </fieldset>
-</form>
 
 
 
