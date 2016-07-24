@@ -64,6 +64,7 @@ if (isset($_GET['name'])) {
 // execute the SQL query
 //$result = mysql_query($query);
     if (!$result) die ("Could not query: " . mysql_error());
+    echo $rows;
     $rows = mysql_num_rows($result);
 //echo $rows;
     for ($i = 0; $i < $rows; ++$i) {
