@@ -50,7 +50,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     echo $name;
 
 
-$result = mysql_query("SELECT * FROM users, bugs WHERE bug_name ='".$name."' AND users.userID = bugs.userID");
+$result = mysql_query("SELECT * FROM users, bugs WHERE bug_name = 'Accidental semicolon' AND users.userID = bugs.userID");
 // execute the SQL query
 //$result = mysql_query($query);
 if(!$result) die ("Could not query: " . mysql_error());
