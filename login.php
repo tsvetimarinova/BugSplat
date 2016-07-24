@@ -16,6 +16,7 @@ if (isset($_POST['bttLogin'])){
 
 <form method="post">
     <fieldset>
+        <legend>Log in:</legend>
     <table cellpadding="2" cellspacing="2" border="0">
         <tr>
             <td>Username:</td>
@@ -37,6 +38,7 @@ if (isset($_POST['bttLogin'])){
 
 <form method="post">
     <fieldset>
+        <legend>Register:</legend>
     <table cellpadding="2" cellspacing="2" border="0">
         <tr>
             <td>Username:</td>
