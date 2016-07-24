@@ -96,14 +96,19 @@ $db->close();
 
 ?>
 
-<form method="post">
-    <div>
-<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
-
-</textarea>
-    </div>
-    <input type="submit" value="Submit">
+<form>
+    <fieldset>
+        <legend>Please leave a comment...</legend>
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="" />
+        <label for="email">Email:</label>
+        <input type="text" name="email" value="" />
+        <label for="comments">Comment:</label>
+        <textarea name="comments" cols="45" rows="5"></textarea>
+        <input type="submit" value="Submit" />
+    </fieldset>
 </form>
+
 
 
 
