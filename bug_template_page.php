@@ -101,7 +101,7 @@ $db->close();
 <form  method="post">
     Comment:<br />
     <textarea name='comment' id='comment'></textarea><br />
-    <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+    <input type='hidden' name='articleid' />
     <input type='submit' value='Submit' />
 </form>
 </body>
