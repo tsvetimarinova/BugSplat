@@ -63,10 +63,9 @@ for($i = 0; $i < $rows; ++$i) {
 }
 
 
-$com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = 'Accidental semicolon' AND comments.bugID = bugs.bugID");
+$com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = '".$name."' AND comments.bugID = bugs.bugID");
 if(!$com) die ("Could not query: " . mysql_error());
 $rows1 = mysql_num_rows($com);
-echo $rows1;
 for($i = 0; $i < $rows1; ++$i) {
     echo 'Comment: ' . mysql_result($com, $i, 'com_description') . '</br>';
 }
