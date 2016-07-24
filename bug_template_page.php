@@ -96,13 +96,25 @@ $db->close();
 
 ?>
 
+<form action="/html/tags/html_form_tag_action.cfm" method="post">
+    <div>
+<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
 
-<h1>Leave a comment here:</h1>
+</textarea>
+    </div>
+    <input type="submit" value="Submit">
+</form>
+
+
+
+
+<!--<h1>Leave a comment here:</h1>
 <form  method="post">
     Comment:<br />
     <textarea name='comment'></textarea><br />
     <input type='hidden' name='articleid' />
     <input type='submit' value='Submit' />
 </form>
+-->
 </body>
 </html>
