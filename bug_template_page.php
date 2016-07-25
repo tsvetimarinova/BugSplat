@@ -35,7 +35,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
         <legend>Please leave a comment...</legend>
         <textarea name="comments" cols="45" rows="5"></textarea>
         <br>
-        <input type="submit" value="Comment" />
+        <input type="submit" value="comment" />
     </fieldset>
 </form>
 
@@ -58,13 +58,17 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     //echo $name;
 if (isset($_GET['name'])) {
     $date = date("Y-m-d");
+    $comment = $_POST['comment'];
     echo $date;
     require 'connect.php';
     $name = $_GET['name'];
     echo $name;
+    $com = mysql_query($con, 'insert into comments values ("C006", "' . $comment . '", "' . $date . '", "U001", "B001")');
+    if (!$com) die ("Could not query: " . mysql_error());
+}
     //$name2 = $_SESSION['bugname'];
     //$result1 = mysql_query($con, 'select * from bugs, users where bug_name = "'.$name2.'" and users.userID = bugs.userID');
-    $result1 = mysql_query($con, "select * from bugs, users where bug_name = '$name' and users.userID = bugs.userID");
+   /* $result1 = mysql_query($con, "select * from bugs, users where bug_name = '$name' and users.userID = bugs.userID");
 // execute the SQL query
 //$result = mysql_query($query);
     if (!$result1) die ("Could not query: " . mysql_error());
@@ -84,7 +88,7 @@ if (isset($_GET['name'])) {
     for ($i = 0; $i < $rows1; ++$i) {
         echo 'Comment: ' . mysql_result($com, $i, 'com_description') . '</br>';
     }
-}
+}*/
 
 /*$query = "SELECT * FROM bugs";
 // execute the SQL query
