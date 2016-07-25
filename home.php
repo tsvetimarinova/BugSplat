@@ -68,7 +68,7 @@ echo 'Welcome, '.$_SESSION['username'];*/
 */
 session_start();
 require 'connect.php';
-$query1 = "SELECT * FROM bugs ORDER BY bugID DESC limit 5";
+$query1 = "SELECT * FROM bugs ORDER BY bugID";
 $result3 = $con->query($query1);
 if (!$result3) die ("Could not query: " . mysqli_error());
 echo "PROBLEEEM!";
