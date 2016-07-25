@@ -62,7 +62,6 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 if (isset($_GET['name'])) {
     $date = date("Y-m-d");
     $comment = $_POST['comment'];
-    echo $date;
     require 'connect.php';
     $name = $_GET['name'];
     echo $name;
