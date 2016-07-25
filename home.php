@@ -72,7 +72,7 @@ $query1 = "SELECT * FROM bugs ORDER BY bugID";
 $result3 = $db->query($query1);
 if (!$result3) die ("Could not query: " . mysql_error());
 while ($bug = mysqli_fetch_assoc($result3)){
-    echo $bug['bug_name'] .\n;
+    echo $bug['bug_name'];
 
 }
 
