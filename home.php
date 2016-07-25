@@ -59,17 +59,17 @@ echo 'Welcome, '.$_SESSION['username'];*/
 </div>
 
 <?php
-/*$db = new mysqli (
+$db = new mysqli (
     "us-cdbr-azure-west-c.cloudapp.net",
     "b4bbf8767a3b3c",
     "7ae9ed4b",
     "databasebug1300608"
 );
-*/
+
 session_start();
 require 'connect.php';
 $query1 = "SELECT * FROM bugs ORDER BY bugID";
-$result3 = $con->query($query1);
+$result3 = $db->query($query1);
 if (!$result3) die ("Could not query: " . mysql_error());
 echo "PROBLEEEM!";
 echo $result3;
