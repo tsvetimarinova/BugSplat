@@ -70,7 +70,7 @@ session_start();
 require 'connect.php';
 $query1 = "SELECT * FROM bugs ORDER BY bugID";
 $result3 = $con->query($query1);
-if (!$result3) die ("Could not query: " . mysqli_error());
+if (!$result3) die ("Could not query: " . mysql_error());
 echo "PROBLEEEM!";
 echo $result3;
 
