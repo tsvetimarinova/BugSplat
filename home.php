@@ -60,7 +60,7 @@ echo 'Welcome, '.$_SESSION['username'];
 
 require 'connect.php';
 $query1 = mysqli_query ($db, 'SELECT * FROM bugs ORDER BY bugID DESC limit 5');
-//$result3 = $db->query($query1);
+$result3 = $db->query($query1);
 
 if (!$result3) die ("Could not query: " . mysql_error());
 echo $result3;
