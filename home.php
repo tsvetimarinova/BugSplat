@@ -66,7 +66,7 @@ $db = new mysqli (
     "databasebug1300608"
 );
 
-session_start();
+    session_start();
 require 'connect.php';
 $query1 = "SELECT * FROM bugs ORDER BY bugID DESC limit 0,5";
 $result3 = $db->query($query1);
