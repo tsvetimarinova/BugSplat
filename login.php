@@ -7,7 +7,7 @@ if (isset($_POST['bttLogin'])){
     $result = mysqli_query($con, 'select * from users where username = "'.$username.'" and password="'.$password.'"');
     if (mysqli_num_rows($result)==1){
         $_SESSION['username'] = $username;
-        header('Location: home_page.html');
+        header('Location: home.php');
     }
     else echo "Account is invalid";
 }
