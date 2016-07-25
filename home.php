@@ -72,8 +72,7 @@ $query1 = "SELECT * FROM bugs ORDER BY bugID DESC limit 0,5";
 $result3 = $db->query($query1);
 if (!$result3) die ("Could not query: " . mysql_error());
 while ($bug = mysqli_fetch_assoc($result3)){
-    echo \n;
-    echo $bug['bug_name'];
+    echo $bug['bug_name'] . "    ";
 
 }
 
