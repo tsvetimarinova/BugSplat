@@ -48,6 +48,7 @@ session_start();
         //$_SESSION ['bug']= $var;
         //echo $_SESSION ['bug'];
         echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$var.'">'.$var.'</a>';
+        $_SESSION ['bugname'] = $var;
     }
 
 
