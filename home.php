@@ -75,7 +75,7 @@ while ($bug = mysqli_fetch_assoc($result3)){
    // echo $bug['bug_name'] . " ";
     echo "<tr>";
     echo "<td>" . '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$bug['bug_name'].'">'.$bug['bug_name'].'</a>' ."</td>";
-
+    echo "</tr>";
     $_SESSION ['bugname'] = $bug['bug_name'];
 
 }
