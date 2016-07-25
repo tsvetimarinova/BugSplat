@@ -15,8 +15,16 @@ if (isset($_POST['bttLogin'])){
 if (isset($_POST['bttReg'])){
     require 'connect.php';
     $username1 = $_POST['username1'];
-    $result2 = mysqli_query($con, 'select * from users where username = "'.$username1.'"');
-    mysqli_query ($con, 'insert into users (userID, name, email, country, developer, admin, privID, username, password) values ("", "Ivan Petrov", "vankata@abv.bg", "Bangladesh", "1", "", "vankata1", "vanka")');
+    $password1 = $_POST['password1'];
+    $fullname = $_POST['fullname'];
+    $email = $_POST['email'];
+    $country = $_POST['country'];
+    $insert = "insert into users values ('0007','".$fullname."','".$email."','".$country."','1','','PR001','".$username1."', '".$password1."')";
+    $q = mysql_query ($insert);
+    if (!$q) echo "Error: " .mysql_error();
+    else echo "Success!";
+    //$result2 = mysqli_query($con, 'select * from users where username = "'.$username1.'"');
+   // mysqli_query ($con, 'insert into users (userID, name, email, country, developer, admin, privID, username, password) values ("", "Ivan Petrov", "vankata@abv.bg", "Bangladesh", "1", "", "vankata1", "vanka")');
     /*if (mysqli_num_rows($result2)==1 ){
         echo "Username already exists.";
     } else {
