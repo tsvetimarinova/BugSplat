@@ -47,7 +47,7 @@ echo 'Welcome, '.$_SESSION['username'];*/
         <h1>
             <?php
             session_start();
-            echo 'Welcome to BugSplat, '.$_SESSION['username'];
+            echo 'Welcome to BugSplat, '.$_SESSION['username'] .'!';
             ?>
         </h1>
     </div>
