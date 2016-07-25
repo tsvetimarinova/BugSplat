@@ -25,13 +25,18 @@
 
 <body>
 
+
+
+
+<div class="container">
+    <li class="active"><a href = "http://bughelp.azurewebsites.net/search.php"> Search Page </a></li>
+    </br>
+</div>
+
 <?php
 session_start();
 echo 'Welcome, '.$_SESSION['username'];
 ?>
-
-
-
 <div class="container">
 
     <div class="starter-template">
