@@ -65,7 +65,9 @@ if (isset($_GET['name'])) {
     echo $name;
     $com = mysql_query($con, 'insert into comments values ("C006", "' . $comment . '", "' . $date . '", "U001", "B001")');
     if (!$com) die ("Could not query: " . mysql_error());
+    else echo $com;
 }
+
     //$name2 = $_SESSION['bugname'];
     //$result1 = mysql_query($con, 'select * from bugs, users where bug_name = "'.$name2.'" and users.userID = bugs.userID');
    /* $result1 = mysql_query($con, "select * from bugs, users where bug_name = '$name' and users.userID = bugs.userID");
