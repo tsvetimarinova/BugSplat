@@ -34,10 +34,22 @@
 </div>
 
 
+<?php
+/*session_start();
+echo 'Welcome, '.$_SESSION['username'];*/
+?>
+
+
+
 <div class="container">
 
     <div class="starter-template">
-        <h1>Welcome to BugSplat</h1>
+        <h1>
+            <?php
+            session_start();
+            echo 'Welcome to BugSplat, '.$_SESSION['username'];
+            ?>
+        </h1>
     </div>
 </div><!-- /.container -->
 
@@ -54,9 +66,6 @@ $db = new mysqli (
     "databasebug1300608"
 );
 
-
-session_start();
-echo 'Welcome, '.$_SESSION['username'];
 
 require 'connect.php';
 $query1 = mysqli_query ($db, 'SELECT * FROM bugs ORDER BY bugID DESC limit 5');
