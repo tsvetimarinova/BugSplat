@@ -56,6 +56,7 @@ echo 'Welcome, '.$_SESSION['username'];*/
 
 <div class="container">
     <li class="active"><a href = "http://bughelp.azurewebsites.net/bugs_page.php"> Bugs Page </a></li>
+    <br />
 </div>
 
 <?php
@@ -73,7 +74,7 @@ $result3 = $db->query($query1);
 if (!$result3) die ("Could not query: " . mysql_error());
 while ($bug = mysqli_fetch_assoc($result3)){
    // echo $bug['bug_name'] . " ";
-    echo "<br />";
+    //echo "<br />";
     echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$bug['bug_name'].'">'.$bug['bug_name'].'</a>' ;
     echo "<br />";
     $_SESSION ['bugname'] = $bug['bug_name'];
