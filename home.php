@@ -28,7 +28,7 @@
 <body>
 
 <?php
-$result3 = mysqli_query ('SELECT * FROM bugs ORDER BY bugID DESC limit 5');
+$result3 = mysql_query ('SELECT * FROM bugs ORDER BY bugID DESC limit 5');
 echo $result;
 ?>
 
