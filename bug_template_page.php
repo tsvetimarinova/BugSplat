@@ -57,6 +57,8 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     //echo 'Welcome '.$_SESSION[$name];
     //echo $name;
 if (isset($_GET['name'])) {
+    $date = date("Y/M/D");
+    echo $date;
     require 'connect.php';
     $name = $_GET['name'];
     echo $name;
