@@ -9,7 +9,7 @@ if (isset($_POST['bttS'])){
         $_SESSION['search'] = $search;
         header('Location: bug_template_page.php');
     }
-    else echo "No match found.";
+    //else echo "No match found.";
 }
 
 
