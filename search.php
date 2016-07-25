@@ -4,7 +4,7 @@ if (isset($_POST['bttS'])){
     require 'connect.php';
     $search = $_POST ['search'];
     $ser = mysqli_query ($con, 'select * from bugs, tags where tag_description = "'.$search.'" and tags.bugID = bugs.bugID');
-    if (mysqli_num_rows($result)==1){
+    if (mysqli_num_rows($ser)==1){
         $_SESSION['search'] = $search;
         header('Location: bug_template_page.php');
     }
