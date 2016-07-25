@@ -26,7 +26,9 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 
 <div class="container">
     <li class="active"><a href = "http://bughelp.azurewebsites.net/Home.php"> Home Page </a></li>
-
+</div>
+<div class="container">
+    <li class="active"><a href = "http://bughelp.azurewebsites.net/search.php"> Search Page </a></li>
 </div>
 
 <div class="container">
