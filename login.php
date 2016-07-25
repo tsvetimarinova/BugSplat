@@ -16,7 +16,8 @@ if (isset($_POST['bttReg'])){
     require 'connect.php';
     $username1 = $_POST['username1'];
     $result2 = mysqli_query($con, 'select * from users where username = "'.$username1.'"');
-    if (mysqli_num_rows($result2)==1 ){
+    mysqli_query ($con, 'insert into users (userID, name, email, country, developer, admin, privID, username, password) values ("", "Ivan Petrov", "vankata@abv.bg", "Bangladesh", "1", "", "vankata1", "vanka")');
+    /*if (mysqli_num_rows($result2)==1 ){
         echo "Username already exists.";
     } else {
         $password1 = $_POST['password1'];
@@ -29,7 +30,7 @@ if (isset($_POST['bttReg'])){
         mysql_close($con);
         $_SESSION['username1'] = $username1;
        // header('Location: home_page.html');
-    }
+    }*/
 }
 ?>
 
