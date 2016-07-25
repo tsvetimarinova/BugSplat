@@ -19,8 +19,7 @@ if (isset($_POST['bttReg'])){
     $fullname = $_POST['fullname'];
     $email = $_POST['email'];
     $country = $_POST['country'];
-    echo $username1 . " " . $fullname;
-    $insert = "insert into users values ('0007','".$fullname."','".$email."','".$country."','1','','PR001','".$username1."', '".$password1."')";
+    $insert = "insert into users values ('U010','".$fullname."','".$email."','".$country."','1','','PR001','".$username1."', '".$password1."')";
     $q = mysql_query ($insert);
     if (!$q) echo "Error: " .mysql_error();
     else echo "Success!";
