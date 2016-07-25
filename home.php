@@ -27,11 +27,7 @@
 
 <body>
 
-<?php
-$result3 = mysqli_query($con, 'SELECT * FROM bugs ORDER BY bugID DESC limit 5');
-echo $result3;
-if (!$result3) die ("Could not query: " . mysql_error());
-?>
+
 
 
 <div class="container">
@@ -48,6 +44,11 @@ if (!$result3) die ("Could not query: " . mysql_error());
      <li><a href = "http://webappcw.azurewebsites.net/QueryTest.php"> Hyperlink - QT - </a></li> -->
 </div>
 
+<?php
+$result3 = mysqli_query($con, "SELECT * FROM bugs ORDER BY bugID DESC limit 5");
+echo $result3;
+if (!$result3) die ("Could not query: " . mysql_error());
+?>
 
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
