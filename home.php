@@ -73,7 +73,8 @@ $result3 = $db->query($query1);
 if (!$result3) die ("Could not query: " . mysql_error());
 while ($bug = mysqli_fetch_assoc($result3)){
    // echo $bug['bug_name'] . " ";
-    echo nl2br ('<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$bug['bug_name'].'">'.$bug['bug_name'].'</a>' .\n);
+    echo "<tr>";
+    echo "<td>" . '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$bug['bug_name'].'">'.$bug['bug_name'].'</a>' ."</td>";
 
     $_SESSION ['bugname'] = $bug['bug_name'];
 
