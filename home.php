@@ -1,5 +1,3 @@
-
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -27,6 +25,10 @@
 
 <body>
 
+<?php
+session_start();
+echo 'Welcome '.$_SESSION['username'];
+?>
 
 
 
@@ -40,8 +42,6 @@
 
 <div class="container">
     <li class="active"><a href = "http://bughelp.azurewebsites.net/bugs_page.php"> Bugs Page </a></li>
-    <!-- <li><a href = "http://webappcw.azurewebsites.net/AdventurePage.php"> Adventure Page </a></li>
-     <li><a href = "http://webappcw.azurewebsites.net/QueryTest.php"> Hyperlink - QT - </a></li> -->
 </div>
 
 <?php
