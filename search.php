@@ -3,7 +3,7 @@ session_start();
 if (isset($_POST['bttS'])){
     require 'connect.php';
     $search = $_POST ['search'];
-    $ser = mysqli_query ($con, "select * from bugs, tags where tag_description = 'help' and tags.tagID = bugs.tagID");
+    $ser = mysql_query ($con, "select * from bugs, tags where tag_description = 'help' and tags.tagID = bugs.tagID");
     if (!$q) echo "Error: " .mysql_error();
     if (mysqli_num_rows($ser)==1){
         $_SESSION['search'] = $search;
