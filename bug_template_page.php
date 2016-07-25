@@ -64,6 +64,7 @@ if (isset($_GET['name'])) {
     $name = $_GET['name'];
     echo $name;
     $com = mysql_query($con, 'insert into comments values ("C006", "' . $comment . '", "' . $date . '", "U001", "B001")');
+    echo "Done!";
     if (!$com) die ("Could not query: " . mysql_error());
     else echo $com;
 }
