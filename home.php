@@ -68,7 +68,7 @@ $db = new mysqli (
 
 session_start();
 require 'connect.php';
-$query1 = "SELECT * FROM bugs ORDER BY bugID DESC ";
+$query1 = "SELECT * FROM bugs ORDER BY bugID DESC limit 0,5";
 $result3 = $db->query($query1);
 if (!$result3) die ("Could not query: " . mysql_error());
 while ($bug = mysqli_fetch_assoc($result3)){
