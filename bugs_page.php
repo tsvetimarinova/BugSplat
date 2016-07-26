@@ -45,13 +45,22 @@ session_start();
     $result = mysql_query($query);
     if(!$result) die ("Could not query: " . mysql_error());
     $rows = mysql_num_rows($result);
-    for($i = 0; $i < $rows; ++$i){
+    if (!$result) die ("Could not query: " . mysql_error());
+    while ($bug = mysqli_fetch_assoc($result)){
         $var = mysql_result($result, $i, 'bug_name') . '</br>';
         //$_SESSION ['bug']= $var;
         //echo $_SESSION ['bug'];
         echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$var.'">'.$var.'</a>';
-        $_SESSION ['bugname'] = $var;
+        $_SESSION ['name'] = $var;
+
     }
+    /*for($i = 0; $i < $rows; ++$i){
+        $var = mysql_result($result, $i, 'bug_name') . '</br>';
+        //$_SESSION ['bug']= $var;
+        //echo $_SESSION ['bug'];
+        echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$var.'">'.$var.'</a>';
+        $_SESSION ['name'] = $var;
+    }*/
 
 
    /* $var = 'Accidental semicolon';
