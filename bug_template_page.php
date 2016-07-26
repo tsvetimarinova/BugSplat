@@ -83,7 +83,7 @@ if (isset($_GET['name'])) {
 // execute the SQL query
 //$result = mysql_query($query);
     if (!$res) die ("Could not query: " . mysql_error());
-    $rows = mysqli_num_rows($res);
+    //$rows = mysqli_num_rows($res);
 //echo $rows;
     //echo "name: ";
     while ($bug1 = mysqli_fetch_assoc($res)) {
@@ -98,22 +98,28 @@ if (isset($_GET['name'])) {
         echo "<br />";
         echo "<br />";
         echo 'Bug: ' . $bug1 ['bug_description'];
-        /* for ($i = 0; $i < $rows; ++$i) {
-             echo 'name: ' . mysqli_result($res, $i, 'name') . '</br>';
-             echo 'email: ' . mysqli_result($res, $i, 'email') . '</br>';
-             echo 'country: ' . mysqli_result($res, $i, 'country') . '</br>';
-
-         }*/
 
     }
 
 
-   /* $com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = 'Accidental semicolon' AND comments.bugID = bugs.bugID");
-    if (!$com) die ("Could not query: " . mysql_error());
-    $rows1 = mysql_num_rows($com);
+    $com = "SELECT * FROM comments, bugs WHERE bug_name = '".$name." ' AND comments.bugID = bugs.bugID";
+    $com_res = $db->query($com);
+    if (!$com_res) die ("Could not query: " . mysql_error());
+    //$rows1 = mysql_num_rows($com);
+    echo "Commens: ";
+    while ($com1 = mysqli_fetch_assoc($com_res)) {
+        // echo $bug['bug_name'] . " ";
+        //echo "<br />";
+        echo "<br />";
+        echo $com1 ['com_description'];
+        echo "<br />";
+        echo 'Date: ' . $bug1 ['com_date'];
+        echo "<br />";
+
+    }
     for ($i = 0; $i < $rows1; ++$i) {
         echo 'Comment: ' . mysql_result($com, $i, 'com_description') . '</br>';
-    }*/
+    }
 }
 
 /*$query = "SELECT * FROM bugs";
