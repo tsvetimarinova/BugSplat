@@ -107,6 +107,8 @@ if (isset($_GET['name'])) {
     if (!$com_res) die ("Could not query: " . mysql_error());
     //$rows1 = mysql_num_rows($com);
     echo "<br />";
+    echo "<br />";
+    echo "<br />";
     echo "Commens: ";
     while ($com1 = mysqli_fetch_assoc($com_res)) {
         // echo $bug['bug_name'] . " ";
