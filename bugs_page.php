@@ -46,18 +46,18 @@ $db = new mysqli (
 );
 session_start();
 
-    $query = "SELECT * FROM bugs";
+    $query = "SELECT bug_name FROM bugs";
     // execute the SQL query
     $result = $db->query($query);
     if(!$result) die ("Could not query: " . mysql_error());
     $rows = mysql_num_rows($result);
     if (!$result) die ("Could not query: " . mysql_error());
     while ($bug = mysqli_fetch_assoc($result)){
-        $var = mysql_result($result, $i, 'bug_name') . '</br>';
+       // $var = mysqli_result($result, $i, 'bug_name') . '</br>';
         //$_SESSION ['bug']= $var;
         //echo $_SESSION ['bug'];
-        echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$var.'">'.$var.'</a>';
-        $_SESSION ['name'] = $var;
+        echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$bug.'">'.$bug.'</a>';
+        $_SESSION ['name'] = $bug;
 
     }
     /*for($i = 0; $i < $rows; ++$i){
