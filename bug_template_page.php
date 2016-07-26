@@ -78,17 +78,24 @@ if (isset($_GET['name'])) {
 
     //$name2 = $_SESSION['bugname'];
     //echo $name2;
-    $query = "select * from bugs, users where bug_name = '".$name2."' and users.userID = bugs.userID";
+    $query = "select * from bugs, users where bug_name = '".$name."' and users.userID = bugs.userID";
     $res = $db->query($query);
 // execute the SQL query
 //$result = mysql_query($query);
     if (!$res) die ("Could not query: " . mysql_error());
     $rows = mysql_num_rows($res);
 //echo $rows;
-    for ($i = 0; $i < $rows; ++$i) {
-        echo 'name: ' . mysql_result($res, $i, 'name') . '</br>';
-        echo 'email: ' . mysql_result($res, $i, 'email') . '</br>';
-        echo 'country: ' . mysql_result($res, $i, 'country') . '</br>';
+    while ($bugname = mysqli_fetch_assoc($res)){
+        // echo $bug['bug_name'] . " ";
+        //echo "<br />";
+        echo $bugname ['bug_name'];
+        /*for ($i = 0; $i < $rows; ++$i) {
+            echo 'name: ' . mysql_result($res, $i, 'name') . '</br>';
+            echo 'email: ' . mysql_result($res, $i, 'email') . '</br>';
+            echo 'country: ' . mysql_result($res, $i, 'country') . '</br>';
+
+        }*/
+
     }
 
 
