@@ -33,14 +33,7 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 </div>
 
 
-<form>
-    <fieldset>
-        <legend>Please leave a comment...</legend>
-        <textarea name="comments" cols="45" rows="5"></textarea>
-        <br>
-        <input type="submit" value="comment" />
-    </fieldset>
-</form>
+
 
 <?php
 
@@ -115,6 +108,7 @@ if (isset($_GET['name'])) {
         //echo "<br />";
         echo "<br />";
         echo $com1 ['com_description'];
+        echo "<br />";
 
 
     }
@@ -149,7 +143,14 @@ $db->close();
 ?>
 
 
-
+<form>
+    <fieldset>
+        <legend>Please leave a comment...</legend>
+        <textarea name="comments" cols="45" rows="5"></textarea>
+        <br>
+        <input type="submit" value="comment" />
+    </fieldset>
+</form>
 
 
 
