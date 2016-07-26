@@ -32,7 +32,14 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
     <li class="active"><a href = "http://bughelp.azurewebsites.net/search.php"> Search Page </a></li>
 </div>
 
-
+<form>
+    <fieldset>
+        <legend>Please leave a comment...</legend>
+        <textarea name="comments" cols="45" rows="5"></textarea>
+        <br>
+        <input type="submit" value="comment" />
+    </fieldset>
+</form>
 
 
 <?php
@@ -143,14 +150,7 @@ $db->close();
 ?>
 
 
-<form>
-    <fieldset>
-        <legend>Please leave a comment...</legend>
-        <textarea name="comments" cols="45" rows="5"></textarea>
-        <br>
-        <input type="submit" value="comment" />
-    </fieldset>
-</form>
+
 
 
 
