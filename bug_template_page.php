@@ -85,6 +85,7 @@ if (isset($_GET['name'])) {
     if (!$res) die ("Could not query: " . mysql_error());
    // $rows = mysql_num_rows($res);
 //echo $rows;
+    echo $res;
     while ($bugname = mysqli_fetch_assoc($res)){
         // echo $bug['bug_name'] . " ";
         //echo "<br />";
