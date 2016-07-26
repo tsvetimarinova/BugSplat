@@ -78,7 +78,7 @@ if (isset($_GET['name'])) {
 
     $name2 = $_SESSION['name'];
     echo $name2;
-    $query = "select * from bugs, users where bug_name = 'Accidental semicolon' and users.userID = bugs.userID";
+    $query = "select * from bugs, users where bug_name = '".$_SESSION['name']."' and users.userID = bugs.userID";
     $res = $db->query($query);
 // execute the SQL query
 //$result = mysql_query($query);
