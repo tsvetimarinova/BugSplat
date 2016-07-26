@@ -38,11 +38,17 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 </div>
 
 <?php
+$db = new mysqli (
+    "us-cdbr-azure-west-c.cloudapp.net",
+    "b4bbf8767a3b3c",
+    "7ae9ed4b",
+    "databasebug1300608"
+);
 session_start();
 
     $query = "SELECT * FROM bugs";
     // execute the SQL query
-    $result = mysql_query($query);
+    $result = $db->query($query);
     if(!$result) die ("Could not query: " . mysql_error());
     $rows = mysql_num_rows($result);
     if (!$result) die ("Could not query: " . mysql_error());
