@@ -50,6 +50,12 @@ mysql_select_db($db_database)or die("Unable to connect to database: " . mysql_er
 //      echo "link 2";
 //  }
 
+$db = new mysqli (
+    "us-cdbr-azure-west-c.cloudapp.net",
+    "b4bbf8767a3b3c",
+    "7ae9ed4b",
+    "databasebug1300608"
+);
 
 
     // Retrieve the URL variables (using PHP).
@@ -65,8 +71,9 @@ if (isset($_GET['name'])) {
     require 'connect.php';
     $name = $_GET['name'];
     echo $name;
-    $com = mysql_query($con, 'insert into comments values (?s, ?s, ?s, ?s, ?s), "C006", "'.$comment.'", "'.$date.'", "U001", "B001"');
-    if (!$com) die ("Could not query: " . mysql_error());
+    $com =  "insert into comments values  ('C006', '.$comment.', '.$date.', 'U001', 'B001')";
+    $result = $db->query($com);
+    if (!$result) die ("Could not query: " . mysql_error());
     else echo "Done!";
 }
 
