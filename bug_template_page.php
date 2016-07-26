@@ -106,15 +106,14 @@ if (isset($_GET['name'])) {
     $com_res = $db->query($com);
     if (!$com_res) die ("Could not query: " . mysql_error());
     //$rows1 = mysql_num_rows($com);
+    echo "<br />";
     echo "Commens: ";
     while ($com1 = mysqli_fetch_assoc($com_res)) {
         // echo $bug['bug_name'] . " ";
         //echo "<br />";
         echo "<br />";
         echo $com1 ['com_description'];
-        echo "<br />";
-        echo 'Date: ' . $bug1 ['com_date'];
-        echo "<br />";
+
 
     }
     for ($i = 0; $i < $rows1; ++$i) {
