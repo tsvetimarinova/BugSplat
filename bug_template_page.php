@@ -92,12 +92,12 @@ if (isset($_GET['name'])) {
         echo "<br />";
         echo $bug1 ['name'];
         echo "<br />";
-        echo $bug1 ['email'];
+        echo 'Name: ' . $bug1 ['email'];
         echo "<br />";
-        echo $bug1 ['country'];
+        echo 'Country: ' .$bug1 ['country'];
         echo "<br />";
         echo "<br />";
-        echo $bug1 ['bug_description'];
+        echo 'Bug: ' . $bug1 ['bug_description'];
         /* for ($i = 0; $i < $rows; ++$i) {
              echo 'name: ' . mysqli_result($res, $i, 'name') . '</br>';
              echo 'email: ' . mysqli_result($res, $i, 'email') . '</br>';
