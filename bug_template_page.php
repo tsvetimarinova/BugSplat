@@ -76,29 +76,28 @@ if (isset($_GET['name'])) {
     //if (!$result) die ("Could not query: " . mysql_error());
     //else echo "Done!";
 
-    $name2 = $_SESSION['bugname'];
-    echo $name2;
-    $result1 = mysql_query($con, 'select * from bugs, users where bug_name = "'.$name2.'" and users.userID = bugs.userID');
-   $result1 = mysql_query($con, "select * from bugs, users where bug_name = '$name' and users.userID = bugs.userID");
+    //$name2 = $_SESSION['bugname'];
+    //echo $name2;
+    $query = "select * from bugs, users where bug_name = '".$name2."' and users.userID = bugs.userID";
+    $res = $db->query($query);
 // execute the SQL query
 //$result = mysql_query($query);
-    if (!$result1) die ("Could not query: " . mysql_error());
-    echo $rows;
-    $rows = mysql_num_rows($result1);
+    if (!$res) die ("Could not query: " . mysql_error());
+    $rows = mysql_num_rows($res);
 //echo $rows;
     for ($i = 0; $i < $rows; ++$i) {
-        echo 'name: ' . mysql_result($result1, $i, 'name') . '</br>';
-        echo 'email: ' . mysql_result($result1, $i, 'email') . '</br>';
-        echo 'country: ' . mysql_result($result1, $i, 'country') . '</br>';
+        echo 'name: ' . mysql_result($res, $i, 'name') . '</br>';
+        echo 'email: ' . mysql_result($res, $i, 'email') . '</br>';
+        echo 'country: ' . mysql_result($res, $i, 'country') . '</br>';
     }
 
 
-    $com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = 'Accidental semicolon' AND comments.bugID = bugs.bugID");
+   /* $com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = 'Accidental semicolon' AND comments.bugID = bugs.bugID");
     if (!$com) die ("Could not query: " . mysql_error());
     $rows1 = mysql_num_rows($com);
     for ($i = 0; $i < $rows1; ++$i) {
         echo 'Comment: ' . mysql_result($com, $i, 'com_description') . '</br>';
-    }
+    }*/
 }
 
 /*$query = "SELECT * FROM bugs";
