@@ -78,7 +78,7 @@ if (isset($_GET['name'])) {
 
     //$name2 = $_SESSION['bugname'];
     //echo $name2;
-    $query = "select * from bugs, users where bug_name = '".$name."' and users.userID = bugs.userID";
+    $query = 'select * from bugs, users where bug_name = "'.$name.'" and users.userID = bugs.userID';
     $res = $db->query($query);
 // execute the SQL query
 //$result = mysql_query($query);
@@ -86,11 +86,11 @@ if (isset($_GET['name'])) {
    // $rows = mysql_num_rows($res);
 //echo $rows;
     //echo "name: ";
-    while ($bugname = mysqli_fetch_assoc($res)){
+    while ($bug1 = mysqli_fetch_assoc($res)){
         // echo $bug['bug_name'] . " ";
         //echo "<br />";
         echo "name: ";
-        echo $bugname ['bug_name'];
+        echo $bug1 ['bug_name'];
         /*for ($i = 0; $i < $rows; ++$i) {
             echo 'name: ' . mysql_result($res, $i, 'name') . '</br>';
             echo 'email: ' . mysql_result($res, $i, 'email') . '</br>';
