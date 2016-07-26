@@ -71,15 +71,15 @@ if (isset($_GET['name'])) {
     require 'connect.php';
     $name = $_GET['name'];
     echo $name;
-    $com =  "insert into comments values ('C006', '".$comment."', '".$date."', 'U001', 'B001')";
-    $result = $db->query($com);
-    if (!$result) die ("Could not query: " . mysql_error());
-    else echo "Done!";
-}
+    //$com =  "insert into comments values ('C006', '".$comment."', '".$date."', 'U001', 'B001')";
+    //$result = $db->query($com);
+    //if (!$result) die ("Could not query: " . mysql_error());
+    //else echo "Done!";
 
-    //$name2 = $_SESSION['bugname'];
-    //$result1 = mysql_query($con, 'select * from bugs, users where bug_name = "'.$name2.'" and users.userID = bugs.userID');
-   /* $result1 = mysql_query($con, "select * from bugs, users where bug_name = '$name' and users.userID = bugs.userID");
+    $name2 = $_SESSION['bugname'];
+    echo $name2;
+    $result1 = mysql_query($con, 'select * from bugs, users where bug_name = "'.$name2.'" and users.userID = bugs.userID');
+   $result1 = mysql_query($con, "select * from bugs, users where bug_name = '$name' and users.userID = bugs.userID");
 // execute the SQL query
 //$result = mysql_query($query);
     if (!$result1) die ("Could not query: " . mysql_error());
@@ -99,7 +99,7 @@ if (isset($_GET['name'])) {
     for ($i = 0; $i < $rows1; ++$i) {
         echo 'Comment: ' . mysql_result($com, $i, 'com_description') . '</br>';
     }
-}*/
+}
 
 /*$query = "SELECT * FROM bugs";
 // execute the SQL query
