@@ -91,7 +91,9 @@ if (isset($_GET['name'])) {
         // echo $bug['bug_name'] . " ";
         //echo "<br />";
         echo "name: ";
+        echo "<br />";
         echo $bug1 ['bug_name'];
+        echo "<br />";
         echo $bug1 ['email'];
         /* for ($i = 0; $i < $rows; ++$i) {
              echo 'name: ' . mysqli_result($res, $i, 'name') . '</br>';
