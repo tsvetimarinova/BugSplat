@@ -83,22 +83,22 @@ if (isset($_GET['name'])) {
 // execute the SQL query
 //$result = mysql_query($query);
     if (!$res) die ("Could not query: " . mysql_error());
-   // $rows = mysql_num_rows($res);
+    $rows = mysql_num_rows($res);
 //echo $rows;
     //echo "name: ";
-    while ($bug1 = mysqli_fetch_assoc($res)){
+    /*while ($bug1 = mysqli_fetch_assoc($res)){
         // echo $bug['bug_name'] . " ";
         //echo "<br />";
         echo "name: ";
-        echo $bug1 ['bug_name'];
-        /*for ($i = 0; $i < $rows; ++$i) {
+        echo $bug1 ['bug_name'];*/
+        for ($i = 0; $i < $rows; ++$i) {
             echo 'name: ' . mysql_result($res, $i, 'name') . '</br>';
             echo 'email: ' . mysql_result($res, $i, 'email') . '</br>';
             echo 'country: ' . mysql_result($res, $i, 'country') . '</br>';
 
-        }*/
+        }
 
-    }
+
 
 
    /* $com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = 'Accidental semicolon' AND comments.bugID = bugs.bugID");
