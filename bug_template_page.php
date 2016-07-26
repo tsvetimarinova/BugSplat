@@ -76,9 +76,9 @@ if (isset($_GET['name'])) {
     //if (!$result) die ("Could not query: " . mysql_error());
     //else echo "Done!";
 
-    $name2 = $_SESSION['name'];
-    echo $name2;
-    $query = "select * from bugs, users where bug_name = '".$_SESSION['name']."' and users.userID = bugs.userID";
+    //$name2 = $_SESSION['name'];
+   // echo $name2;
+    $query = "select * from bugs, users where bug_name = ".$name." and users.userID = bugs.userID";
     $res = $db->query($query);
 // execute the SQL query
 //$result = mysql_query($query);
