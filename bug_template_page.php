@@ -87,19 +87,19 @@ if (isset($_GET['name'])) {
     echo $rows;
 //echo $rows;
     //echo "name: ";
-    /*while ($bug1 = mysqli_fetch_assoc($res)){
+    while ($bug1 = mysqli_fetch_assoc($res)) {
         // echo $bug['bug_name'] . " ";
         //echo "<br />";
         echo "name: ";
-        echo $bug1 ['bug_name'];*/
-        for ($i = 0; $i < $rows; ++$i) {
-            echo 'name: ' . mysqli_result($res, $i, 'name') . '</br>';
-            echo 'email: ' . mysqli_result($res, $i, 'email') . '</br>';
-            echo 'country: ' . mysqli_result($res, $i, 'country') . '</br>';
+        echo $bug1 ['bug_name'];
+        /* for ($i = 0; $i < $rows; ++$i) {
+             echo 'name: ' . mysqli_result($res, $i, 'name') . '</br>';
+             echo 'email: ' . mysqli_result($res, $i, 'email') . '</br>';
+             echo 'country: ' . mysqli_result($res, $i, 'country') . '</br>';
 
-        }
+         }*/
 
-
+    }
 
 
    /* $com = mysql_query("SELECT * FROM comments, bugs WHERE bug_name = 'Accidental semicolon' AND comments.bugID = bugs.bugID");
