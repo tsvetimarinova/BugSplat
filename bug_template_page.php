@@ -84,17 +84,20 @@ if (isset($_GET['name'])) {
 //$result = mysql_query($query);
     if (!$res) die ("Could not query: " . mysql_error());
     $rows = mysqli_num_rows($res);
-    echo $rows;
 //echo $rows;
     //echo "name: ";
     while ($bug1 = mysqli_fetch_assoc($res)) {
         // echo $bug['bug_name'] . " ";
         //echo "<br />";
-        echo "name: ";
         echo "<br />";
-        echo $bug1 ['bug_name'];
+        echo $bug1 ['name'];
         echo "<br />";
         echo $bug1 ['email'];
+        echo "<br />";
+        echo $bug1 ['country'];
+        echo "<br />";
+        echo "<br />";
+        echo $bug1 ['bug_description'];
         /* for ($i = 0; $i < $rows; ++$i) {
              echo 'name: ' . mysqli_result($res, $i, 'name') . '</br>';
              echo 'email: ' . mysqli_result($res, $i, 'email') . '</br>';
