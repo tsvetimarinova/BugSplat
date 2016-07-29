@@ -30,12 +30,6 @@ INSERT INTO Bugs (bugID, bug_name, bug_description, userID) VALUES ('B006', '', 
 INSERT INTO Bugs (bugID, bug_name, bug_description, userID) VALUES ('B007', '', '', 'U004');
 INSERT INTO Bugs (bugID, bug_name, bug_description, userID) VALUES ('B008', '', '', 'U004');
 INSERT INTO Bugs (bugID, bug_name, bug_description, userID) VALUES ('B009', '', '', 'U004');
-INSERT INTO Bugs (bugID, bug_name, bug_description, userID) VALUES ('B010', '', '', 'U005');
-INSERT INTO Bugs (bugID, bug_name, bug_description, userID) VALUES ('B011', '', '', 'U005');
-INSERT INTO Bugs (bugID, bug_name, bug_description, userID) VALUES ('B012', '', '', 'U005');
-INSERT INTO Bugs (bugID, bug_name, bug_description, userID) VALUES ('B013', '', '', 'U006');
-INSERT INTO Bugs (bugID, bug_name, bug_description, userID) VALUES ('B014', '', '', 'U006');
-INSERT INTO Bugs (bugID, bug_name, bug_description, userID) VALUES ('B015', '', '', 'U006');
 
 ";
 
