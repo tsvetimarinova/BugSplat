@@ -8,7 +8,14 @@
     <li class="active"><a href = "http://bughelp.azurewebsites.net/search.php"> Search Page </a></li>
 </div>
 
-
+<form metod="post">
+    <fieldset>
+        <legend>Please leave a comment...</legend>
+        <textarea name="comments" cols="45" rows="5"></textarea>
+        <br>
+        <input type="submit" name= "bttCom" value="comment" />
+    </fieldset>
+</form>
 
 
 <?php
