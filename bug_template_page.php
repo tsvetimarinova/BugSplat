@@ -49,9 +49,9 @@ if (isset($_GET['name'])) {
 
     while ($bug1 = mysqli_fetch_assoc($res)) {
         echo "<br />";
-        echo $bug1 ['name'];
+        echo 'Name: ' . $bug1 ['name'];
         echo "<br />";
-        echo 'Name: ' . $bug1 ['email'];
+        echo 'Email: ' . $bug1 ['email'];
         echo "<br />";
         echo 'Country: ' .$bug1 ['country'];
         echo "<br />";
