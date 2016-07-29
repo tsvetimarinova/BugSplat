@@ -9,14 +9,7 @@
     <li class="active"><a href = "http://bughelp.azurewebsites.net/search.php"> Search Page </a></li>
 </div>
 
-<form>
-    <fieldset>
-        <legend>Please leave a comment...</legend>
-        <textarea name="comments" cols="45" rows="5"></textarea>
-        <br>
-        <input type="submit" name= "bttCom" value="comment" />
-    </fieldset>
-</form>
+
 
 
 <?php
@@ -42,7 +35,7 @@ if (isset($_POST['bttCom'])) {
     if (!$result_com) die ("Could not query: " . mysql_error());
     echo 'Your comment is added to the database. Please refresh the page to see it.';
 
-
+}
     if (isset($_GET['name'])) {
         require 'connect.php';
         $name = $_GET['name'];
@@ -87,7 +80,7 @@ if (isset($_POST['bttCom'])) {
     }
 
 
-}
+
 
 $result->close();
 // close connection to database
@@ -97,7 +90,14 @@ $db->close();
 
 
 
-
+<form>
+    <fieldset>
+        <legend>Please leave a comment...</legend>
+        <textarea name="comments" cols="45" rows="5"></textarea>
+        <br>
+        <input type="submit" name= "bttCom" value="comment" />
+    </fieldset>
+</form>
 
 
 </body>
