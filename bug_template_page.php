@@ -34,7 +34,7 @@ $db = new mysqli (
     session_start();
 if (isset($_GET['name'])) {
     $date = date("Y-m-d");
-    $comment = $_POST['comment'];
+    $comment = $_POST['comments'];
     require 'connect.php';
     $name = $_GET['name'];
     echo $name;
@@ -67,7 +67,7 @@ if (isset($_GET['name'])) {
     echo "<br />";
     echo "<br />";
     echo "<br />";
-    echo "Commens: ";
+    echo "Comments: ";
     while ($com1 = mysqli_fetch_assoc($com_res)) {
         echo "<br />";
         echo $com1 ['com_description'];
