@@ -12,7 +12,7 @@
 <form>
     <fieldset>
         <legend>Please leave a comment...</legend>
-        <textarea name="comments" cols="45" rows="5"></textarea>
+        <textarea type= 'text' name="comments"></textarea>
         <br>
         <input type="submit" name= "bttCom" value="Comment" />
     </fieldset>
