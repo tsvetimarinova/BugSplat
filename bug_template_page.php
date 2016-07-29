@@ -88,7 +88,7 @@ $db->close();
 ?>
 
 
-<form>
+<form metod="post">
     <fieldset>
         <legend>Please leave a comment...</legend>
         <textarea name="comments" cols="45" rows="5"></textarea>
