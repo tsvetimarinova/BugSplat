@@ -73,10 +73,15 @@ if (isset($_GET['name'])) {
         echo "<br />";
         echo $com1 ['com_description'];
         echo "<br />";
-
-
     }
 
+
+
+
+    $insert_com = "insert into comments values ('C006', '".$comment."', '".$date."', '0002', '0001')";
+    $result_com = $db->query($insert_com);
+    if (!$result_com) die ("Could not query: " . mysql_error());
+    echo 'Your comment is added to the database. Please refresh the page to see it.';
 }
 
 
