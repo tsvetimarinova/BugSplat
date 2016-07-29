@@ -8,16 +8,32 @@
 
 
 <?php
+$db = new mysqli (
+    "us-cdbr-azure-west-c.cloudapp.net",
+    "b4bbf8767a3b3c",
+    "7ae9ed4b",
+    "databasebug1300608"
+);
+
 session_start();
 if (isset($_POST['bttS'])){
     require 'connect.php';
     $search = $_POST ['search'];
-    $ser = mysqli_query ("select * from bugs, tags where tag_description = 'help' and tags.tagID = bugs.tagID");
-    if (!$q) echo "Error: " .mysql_error();
-    if (mysqli_num_rows($ser)==1){
+    echo $search;
+    $query = "select * from bugs, tags where tag_description = '".$search."' and tags.tagID = bugs.tagID";
+    $result1 = $db->query($query);
+    if (!$result1) echo "Error: " .mysql_error();
+    while ($tag = mysqli_fetch_assoc($result1)){
+        echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$tag['bug_name'].'">'.$tag['bug_name'].'</a>';
+        echo "<br />";
+
+    }
+
+
+   /* if (mysqli_num_rows($ser)==1){
         $_SESSION['search'] = $search;
         header('Location: bug_template_page.php');
-    }
+    }*/
     //else echo "No match found.";
 }
 
