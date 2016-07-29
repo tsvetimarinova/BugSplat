@@ -4,6 +4,22 @@
     <li class="active"><a href = "http://bughelp.azurewebsites.net/Home.php"> Home Page </a></li>
     <li class="active"><a href = "http://bughelp.azurewebsites.net/bugs_page.php"> Bugs Page </a></li>
 </div>
+
+<form method="post">
+    <fieldset>
+        <legend>Search:</legend>
+        <table cellpadding="1" cellspacing="1" border="0">
+            <tr>
+                <td></td>
+                <td><input type="text" name="search"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="bttS" value="Search"></td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
 </html>
 
 
@@ -22,11 +38,11 @@ if (isset($_POST['bttS'])){
     $query = "select * from bugs, tags where tag_description = '".$search."' and tags.tagID = bugs.tagID";
     $result1 = $db->query($query);
     if (!$result1) echo "Error: " .mysql_error();
+    echo "<br />";
+    echo "<br />";
+    echo "<br />";
+    echo "<br />";
     while ($tag = mysqli_fetch_assoc($result1)){
-        echo "<br />";
-        echo "<br />";
-        echo "<br />";
-        echo "<br />";
         echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$tag['bug_name'].'">'.$tag['bug_name'].'</a>';
         echo "<br />";
 
@@ -46,20 +62,6 @@ if (isset($_POST['bttS'])){
 
 <html>
 
-<form method="post">
-    <fieldset>
-        <legend>Search:</legend>
-        <table cellpadding="1" cellspacing="1" border="0">
-            <tr>
-                <td></td>
-                <td><input type="text" name="search"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" name="bttS" value="Search"></td>
-            </tr>
-        </table>
-    </fieldset>
-</form>
+
 
 </html>
