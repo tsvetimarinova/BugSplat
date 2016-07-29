@@ -33,8 +33,6 @@ $db = new mysqli (
     // Retrieve the URL variables (using PHP).
     session_start();
 if (isset($_GET['name'])) {
-    $date = date("Y-m-d");
-    $comment = $_POST['comments'];
     require 'connect.php';
     $name = $_GET['name'];
     echo $name;
@@ -75,14 +73,18 @@ if (isset($_GET['name'])) {
     }
 
 
-    if (isset($_POST['bttCom'])) {
-        $insert_com = "insert into comments values ('C006', '" . $comment . "', '" . $date . "', '0002', '0001')";
-        $result_com = $db->query($insert_com);
-        if (!$result_com) die ("Could not query: " . mysql_error());
-        echo 'Your comment is added to the database. Please refresh the page to see it.';
-    }
-
 }
+
+if (isset($_POST['bttCom'])) {
+    $date = date("Y-m-d");
+    $comment = $_POST['comments'];
+
+    $insert_com = "insert into comments values ('C006', '" . $comment . "', '" . $date . "', '0002', '0001')";
+    $result_com = $db->query($insert_com);
+    if (!$result_com) die ("Could not query: " . mysql_error());
+    echo 'Your comment is added to the database. Please refresh the page to see it.';
+}
+
 
 $result->close();
 // close connection to database
