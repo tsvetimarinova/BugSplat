@@ -47,7 +47,7 @@ if (isset($_POST['bttS'])){
     echo "<br />";
     echo "<br />";
     echo "<br />";
-    echo "<br />";
+    echo "Results: ";
     while ($tag = mysqli_fetch_assoc($result1)){
         echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$tag['bug_name'].'">'.$tag['bug_name'].'</a>';
         echo "<br />";
