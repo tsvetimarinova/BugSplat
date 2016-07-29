@@ -53,9 +53,6 @@ session_start();
     $rows = mysql_num_rows($result);
     if (!$result) die ("Could not query: " . mysql_error());
     while ($bug = mysqli_fetch_assoc($result)){
-       // $var = mysqli_result($result, $i, 'bug_name') . '</br>';
-        //$_SESSION ['bug']= $var;
-        //echo $_SESSION ['bug'];
         echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$bug['bug_name'].'">'.$bug['bug_name'].'</a>';
         echo "<br />";
         $_SESSION ['name'] = $bug['bug_name'];
