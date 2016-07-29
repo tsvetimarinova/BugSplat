@@ -3,6 +3,12 @@
 <div class="container">
     <li class="active"><a href = "http://bughelp.azurewebsites.net/Home.php"> Home Page </a></li>
     <li class="active"><a href = "http://bughelp.azurewebsites.net/bugs_page.php"> Bugs Page </a></li>
+    <p>
+
+
+
+
+    </p>
 </div>
 
 <form method="post">
