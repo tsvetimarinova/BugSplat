@@ -1,5 +1,4 @@
-<html>
-<body>
+
 
 <div class="container">
     <li class="active"><a href = "http://bughelp.azurewebsites.net/Home.php"> Home Page </a></li>
@@ -89,7 +88,6 @@ $db->close();
 ?>
 
 
-
 <form>
     <fieldset>
         <legend>Please leave a comment...</legend>
@@ -100,6 +98,5 @@ $db->close();
 </form>
 
 
-</body>
-</html>
+
 
