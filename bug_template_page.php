@@ -14,7 +14,7 @@
         <legend>Please leave a comment...</legend>
         <textarea name="comments" cols="45" rows="5"></textarea>
         <br>
-        <input type="submit" value="comment" />
+        <input type="submit" name= "bttCom" value="Comment" />
     </fieldset>
 </form>
 
@@ -40,8 +40,7 @@ if (isset($_GET['name'])) {
     echo $name;
 
 
-
-    $query = "select * from bugs, users where bug_name = '".$name."' and users.userID = bugs.userID";
+    $query = "select * from bugs, users where bug_name = '" . $name . "' and users.userID = bugs.userID";
     $res = $db->query($query);
 // execute the SQL query
 
@@ -53,7 +52,7 @@ if (isset($_GET['name'])) {
         echo "<br />";
         echo 'Email: ' . $bug1 ['email'];
         echo "<br />";
-        echo 'Country: ' .$bug1 ['country'];
+        echo 'Country: ' . $bug1 ['country'];
         echo "<br />";
         echo "<br />";
         echo 'Bug: ' . $bug1 ['bug_description'];
@@ -61,7 +60,7 @@ if (isset($_GET['name'])) {
     }
 
 
-    $com = "SELECT * FROM comments, bugs WHERE bug_name = '".$name." ' AND comments.bugID = bugs.bugID";
+    $com = "SELECT * FROM comments, bugs WHERE bug_name = '" . $name . " ' AND comments.bugID = bugs.bugID";
     $com_res = $db->query($com);
     if (!$com_res) die ("Could not query: " . mysql_error());
     //$rows1 = mysql_num_rows($com);
@@ -76,15 +75,14 @@ if (isset($_GET['name'])) {
     }
 
 
+    if (isset($_POST['bttCom'])) {
+        $insert_com = "insert into comments values ('C006', '" . $comment . "', '" . $date . "', '0002', '0001')";
+        $result_com = $db->query($insert_com);
+        if (!$result_com) die ("Could not query: " . mysql_error());
+        echo 'Your comment is added to the database. Please refresh the page to see it.';
+    }
 
-
-    $insert_com = "insert into comments values ('C006', '".$comment."', '".$date."', '0002', '0001')";
-    $result_com = $db->query($insert_com);
-    if (!$result_com) die ("Could not query: " . mysql_error());
-    echo 'Your comment is added to the database. Please refresh the page to see it.';
 }
-
-
 
 $result->close();
 // close connection to database
