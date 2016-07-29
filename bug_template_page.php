@@ -34,7 +34,7 @@ $db = new mysqli (
     session_start();
 if (isset($_GET['name'])) {
     $date = date("Y-m-d");
-    $comment = $_POST['comment'];
+    $comment = $_POST['Comment'];
     require 'connect.php';
     $name = $_GET['name'];
     echo $name;
