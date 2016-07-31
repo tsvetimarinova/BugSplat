@@ -9,12 +9,12 @@
             <tr>
                 <td>Bug description:</td>
             </tr>
-        </table>
+
 
         <textarea name="comments" cols="38.5" rows="5">
 
         </textarea>
-        <table cellpadding="2" cellspacing="2" border="0">
+
             <tr>
                 <td>Tag:</td>
                 <td><input type="text" name="tag"></td>
