@@ -80,7 +80,7 @@ if (isset($_POST['bttCom'])) {
     $date = date("Y-m-d");
     $comment = $_POST['comments'];
 
-    $insert_com = "insert into comments values (NULL, '" . $comment . "', '" . $date . "', '2', '3')";
+    $insert_com = "insert into comments values ('', '" . $comment . "', '" . $date . "', '2', '3')";
     $result_com = $db->query($insert_com);
     if (!$result_com) die ("Could not query: " . mysql_error());
     echo 'Your comment is added to the database. Please refresh the page to see it.';
