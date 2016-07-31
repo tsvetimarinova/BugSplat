@@ -46,7 +46,7 @@ $db = new mysqli (
 );
 session_start();
 
-    $query = "SELECT bug_name FROM bugs";
+    $query = "SELECT * FROM bugs";
     // execute the SQL query
     $result = $db->query($query);
     if(!$result) die ("Could not query: " . mysql_error());
