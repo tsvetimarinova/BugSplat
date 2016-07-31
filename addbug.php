@@ -11,7 +11,7 @@
             </tr>
         </table>
 
-        <textarea name="comments" cols="45" rows="5">
+        <textarea name="comments" cols="40" rows="5">
 
         </textarea>
         <table cellpadding="2" cellspacing="2" border="0">
