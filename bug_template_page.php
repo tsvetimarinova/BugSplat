@@ -81,7 +81,8 @@ if (isset($_POST['bttCom'])) {
     $comment = $_POST['comments'];
     echo $date;
     echo $comment;
-
+    $id = $_SESSION['id'];
+    echo $id;
     $insertcom = "insert into comments values (NULL, '".$comment."', '".$date."', '2', '1')";
     $resultcom = $db->query($insertcom);
     if (!$resultcom) die ("Could not query: " . mysql_error());
