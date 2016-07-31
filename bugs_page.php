@@ -46,7 +46,7 @@ $db = new mysqli (
 );
 session_start();
 
-    $query = "SELECT * FROM bugs";
+    $query = "SELECT bug_name FROM bugs";
     // execute the SQL query
     $result = $db->query($query);
     if(!$result) die ("Could not query: " . mysql_error());
@@ -56,7 +56,6 @@ session_start();
         echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$bug['bug_name'].'">'.$bug['bug_name'].'</a>';
         echo "<br />";
         $_SESSION ['name'] = $bug['bug_name'];
-        $_SESSION ['bugid'] = $bug['bugID'];
 
     }
     /*for($i = 0; $i < $rows; ++$i){
