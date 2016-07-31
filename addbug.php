@@ -3,6 +3,7 @@
         <legend>Add Bug</legend>
         <tr>
             <td>Bug </td>
+            <br />
             <td>description</td>
             <textarea name="decription" cols="45" rows="5"></textarea>
         </tr>
