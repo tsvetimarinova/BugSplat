@@ -2,7 +2,8 @@
     <fieldset>
         <legend>Add Bug</legend>
         <tr>
-            <td>Bug description</td>
+            <td>Bug </td>
+            <td>description</td>
             <textarea name="decription" cols="45" rows="5"></textarea>
         </tr>
         <table cellpadding="2" cellspacing="2" border="0">
