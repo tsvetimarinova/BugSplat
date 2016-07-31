@@ -68,7 +68,7 @@ $db = new mysqli (
         echo "<br />";
         echo "Comments: ";
         while ($com1 = mysqli_fetch_assoc($com_res)) {
-            $bugid = $com1 ['bugID'];
+            $_SESSION['bugid'] = $com1 ['bugID'];
             echo "<br />";
             echo $com1 ['com_description'];
             echo "<br />";
@@ -82,7 +82,7 @@ $db = new mysqli (
 if (isset($_POST['bttCom'])) {
     $date = date("Y-m-d");
     $comment = $_POST['comments'];
-    echo $bugid;
+    echo $_SESSION['bugid'];
     $id = $_SESSION['id'];
     $insertcom = "insert into comments values (NULL, '".$comment."', '".$date."', '".$id."', '1')";
     $resultcom = $db->query($insertcom);
