@@ -9,7 +9,7 @@
             </table>
             <tr>
                 <td>Bug description</td>
-            <textarea name="decription" cols="5" rows="1"></textarea>
+            <textarea name="decription" cols="45" rows="5"></textarea>
             </tr>
         <table cellpadding="2" cellspacing="2" border="0">
             <tr>
