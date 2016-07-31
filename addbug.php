@@ -7,10 +7,11 @@
                 <td><input type="text" name="bugname"></td>
             </tr>
         </table>
+        <tr>
+            <td>Bug description:</td>
+        </tr>
         <textarea name="comments" cols="45" rows="5">
-            <tr>
-                <td>Bug description:</td>
-            </tr>
+
         </textarea>
         <table cellpadding="2" cellspacing="2" border="0">
             <tr>
