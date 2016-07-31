@@ -26,7 +26,7 @@ if (isset($_POST['bttReg'])){
     $fullname = $_POST['fullname'];
     $email = $_POST['email'];
     $country = $_POST['country'];
-    $insert15 = "insert into users values (NULL, '".$fullname."','".$email."','".$country."','1',NULL,NULL,'".$username1."', '".$password1."')";
+    $insert15 = "insert into users values ('7', '".$fullname."','".$email."','".$country."','1',NULL,NULL,'".$username1."', '".$password1."')";
     $result15 = $db->query($insert15);
     if (!$result15) echo "Error: " .mysqli_error();
     else echo "You have completed the registration! ";
