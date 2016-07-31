@@ -7,7 +7,7 @@
                 <td><input type="text" name="bugname"></td>
             </tr>
         </table>
-        <table cellpadding="5" cellspacing="5" border="0">
+        <table cellpadding="15" cellspacing="15" border="0">
             <tr>
                 <td>Bug description:</td>
                 <td><input type="text" name="description"></td>
