@@ -80,7 +80,7 @@ if (isset($_POST['bttCom'])) {
     $date = date("Y-m-d");
     $comment = $_POST['comments'];
 
-    $insert_com = "insert into comments values ('C007', '" . $comment . "', '" . $date . "', '0002', '0001')";
+    $insert_com = "insert into comments values ('3', '" . $comment . "', '" . $date . "', '2', '1')";
     $result_com = $db->query($insert_com);
     if (!$result_com) die ("Could not query: " . mysql_error());
     echo 'Your comment is added to the database. Please refresh the page to see it.';
@@ -95,14 +95,6 @@ $db->close();
 ?>
 
 
-<form metod="post">
-    <fieldset>
-        <legend>Please leave a comment...</legend>
-        <textarea name="comments" cols="45" rows="5"></textarea>
-        <br>
-        <input type="submit" name= "bttCom" value="comment" />
-    </fieldset>
-</form>
 
 
 
