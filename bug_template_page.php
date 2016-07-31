@@ -72,8 +72,9 @@ $db = new mysqli (
             echo "<br />";
             echo $com1 ['com_description'];
             echo "<br />";
+            echo $bugid;
         }
-        echo $bugid;
+
 
 
     }
