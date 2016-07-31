@@ -12,11 +12,16 @@ if (isset($_POST['bttLogin'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
     $result = mysqli_query($con, 'select * from users where username = "'.$username.'" and password="'.$password.'"');
-    if (mysqli_num_rows($result)==1){
+    while ($login = mysqli_fetch_assoc($result)){
+        $_SESSION ['id'] = $login['userID'];
         $_SESSION['username'] = $username;
         header('Location: home.php');
     }
-    else echo "Account is invalid";
+   /* if (mysqli_num_rows($result)==1){
+        $_SESSION['username'] = $username;
+        header('Location: home.php');
+    }
+    else echo "Account is invalid";*/
 }
 
 
