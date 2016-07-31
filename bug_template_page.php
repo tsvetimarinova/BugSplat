@@ -68,7 +68,6 @@ $db = new mysqli (
         echo "<br />";
         echo "Comments: ";
         while ($com1 = mysqli_fetch_assoc($com_res)) {
-            $_SESSION['bugid'] = $com1 ['bugID'];
             echo "<br />";
             echo $com1 ['com_description'];
             echo "<br />";
@@ -82,8 +81,13 @@ $db = new mysqli (
 if (isset($_POST['bttCom'])) {
     $date = date("Y-m-d");
     $comment = $_POST['comments'];
-    echo $_SESSION['bugid'];
     $id = $_SESSION['id'];
+    $bug = "SELECT * FROM bugs WHERE bug_name = '".$name."'";
+    while ($bug1 = mysqli_fetch_assoc($bug)) {
+        echo "<br />";
+        echo $bug1 ['bugID'];
+        echo "<br />";
+    }
     $insertcom = "insert into comments values (NULL, '".$comment."', '".$date."', '".$id."', '1')";
     $resultcom = $db->query($insertcom);
     if (!$resultcom) die ("Could not query: " . mysql_error());
