@@ -8,7 +8,7 @@
             </tr>
             <tr>
                 <td>Bug description</td>
-            <textarea name="decription" cols="45" rows="5"></textarea>
+            <textarea name="decription" cols="5" rows="5"></textarea>
             </tr>
             <tr>
                 <td>Tag:</td>
