@@ -1,4 +1,11 @@
 <?php
+$db = new mysqli (
+    "us-cdbr-azure-west-c.cloudapp.net",
+    "b4bbf8767a3b3c",
+    "7ae9ed4b",
+    "databasebug1300608"
+);
+
 session_start();
 if (isset($_POST['bttLogin'])){
     require 'connect.php';
@@ -12,17 +19,27 @@ if (isset($_POST['bttLogin'])){
     else echo "Account is invalid";
 }
 
+if (isset($_POST['bttCom'])) {
+    $date = date("Y-m-d");
+    $comment = $_POST['comments'];
+
+    $insert_com = "insert into comments values ('C007', '" . $comment . "', '" . $date . "', '0002', '0001')";
+    $result_com = $db->query($insert_com);
+    if (!$result_com) die ("Could not query: " . mysql_error());
+    echo 'Your comment is added to the database. Please refresh the page to see it.';
+
+}
+
 if (isset($_POST['bttReg'])){
-    require 'connect.php';
     $username1 = $_POST['username1'];
     $password1 = $_POST['password1'];
     $fullname = $_POST['fullname'];
     $email = $_POST['email'];
     $country = $_POST['country'];
-    $insert = mysqli_query($con, "insert into users values ('U010','".$fullname."','".$email."','".$country."','1','','PR001','".$username1."', '".$password1."')");
-    $q = mysql_query ($insert);
-    if (!$q) echo "Error: " .mysql_error();
-    else echo "Success!";
+    $insert_reg = "insert into users(name, email, country, developer, admin, privID, username, password) values ('".$fullname."','".$email."','".$country."','1','','','".$username1."', '".$password1."')";
+    $result_reg = $db->query($insert_reg);
+    if (!$result_reg) echo "Error: " .mysql_error();
+    else echo "You have completed the registration! ";
     //$result2 = mysqli_query($con, 'select * from users where username = "'.$username1.'"');
    // mysqli_query ($con, 'insert into users (userID, name, email, country, developer, admin, privID, username, password) values ("", "Ivan Petrov", "vankata@abv.bg", "Bangladesh", "1", "", "vankata1", "vanka")');
     /*if (mysqli_num_rows($result2)==1 ){
