@@ -82,12 +82,8 @@ if (isset($_POST['bttCom'])) {
     $date = date("Y-m-d");
     $comment = $_POST['comments'];
     $id = $_SESSION['id'];
-    $bug = "SELECT * FROM bugs WHERE bug_name = '".$name."'";
-    while ($bug1 = mysqli_fetch_assoc($bug)) {
-        echo "<br />";
-        echo $bug1 ['bugID'];
-        echo "<br />";
-    }
+    $bug = $_SESSION['bugid'];
+    echo $bug;
     $insertcom = "insert into comments values (NULL, '".$comment."', '".$date."', '".$id."', '1')";
     $resultcom = $db->query($insertcom);
     if (!$resultcom) die ("Could not query: " . mysql_error());
