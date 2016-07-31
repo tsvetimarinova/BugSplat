@@ -74,7 +74,7 @@ $db = new mysqli (
             echo "<br />";
 
         }
-        echo $bugid;
+
 
 
     }
@@ -82,8 +82,7 @@ $db = new mysqli (
 if (isset($_POST['bttCom'])) {
     $date = date("Y-m-d");
     $comment = $_POST['comments'];
-    echo $date;
-    echo $comment;
+    echo $bugid;
     $id = $_SESSION['id'];
     $insertcom = "insert into comments values (NULL, '".$comment."', '".$date."', '".$id."', '1')";
     $resultcom = $db->query($insertcom);
