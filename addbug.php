@@ -1,10 +1,8 @@
 <form method="post">
     <fieldset>
         <legend>Add Bug</legend>
+        <td>Bug description:</td>
         <tr>
-            <td>Bug </td>
-            <br />
-            <td>description</td>
             <textarea name="decription" cols="45" rows="5"></textarea>
         </tr>
         <table cellpadding="2" cellspacing="2" border="0">
