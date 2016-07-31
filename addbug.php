@@ -6,9 +6,11 @@
                 <td>Bug name:</td>
                 <td><input type="text" name="bugname"></td>
             </tr>
-            <td>Bug description</td>
+            <tr>
+                <td>Bug description</td>
             <textarea name="decription" cols="45" rows="5"></textarea>
             <tr>
+            </tr>
                 <td>Tag:</td>
                 <td><input type="text" name="tag"></td>
             </tr>
