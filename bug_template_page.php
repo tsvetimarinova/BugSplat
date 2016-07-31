@@ -80,8 +80,7 @@ $db = new mysqli (
             $date = date("Y-m-d");
             $comment = $_POST['comments'];
             $id = $_SESSION['id'];
-            echo $bugid;
-            $insertcom = "insert into comments values (NULL, '".$comment."', '".$date."', '".$id."', '1')";
+            $insertcom = "insert into comments values (NULL, '".$comment."', '".$date."', '".$id."', '".$bugid."')";
             $resultcom = $db->query($insertcom);
             if (!$resultcom) die ("Could not query: " . mysql_error());
             echo 'Your comment is added to the database. Please refresh the page to see it.';
