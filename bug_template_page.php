@@ -68,10 +68,12 @@ $db = new mysqli (
         echo "<br />";
         echo "Comments: ";
         while ($com1 = mysqli_fetch_assoc($com_res)) {
+            $bugid = $com1 ['bugID'];
             echo "<br />";
             echo $com1 ['com_description'];
             echo "<br />";
         }
+        echo $bugid;
 
 
     }
@@ -82,8 +84,7 @@ if (isset($_POST['bttCom'])) {
     echo $date;
     echo $comment;
     $id = $_SESSION['id'];
-    echo $id;
-    $insertcom = "insert into comments values (NULL, '".$comment."', '".$date."', '2', '1')";
+    $insertcom = "insert into comments values (NULL, '".$comment."', '".$date."', '".$id."', '1')";
     $resultcom = $db->query($insertcom);
     if (!$resultcom) die ("Could not query: " . mysql_error());
     echo 'Your comment is added to the database. Please refresh the page to see it.';
