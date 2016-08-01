@@ -55,8 +55,8 @@ if (isset($_POST['bttAdd'])) {
     echo '<br />' ;
     $tagname = "SELECT * FROM tags WHERE tag_description = '".$tag."'";
     while ($tag471 = mysqli_fetch_assoc($tagname)){
-        $tagID = $tag471['tagID'];
-        echo $tagID;
+        echo $tag471['tagID'];
+        //echo $tagID;
     }
 
 
