@@ -1,3 +1,14 @@
+<div class="container">
+    <li class="active"><a href = "http://bughelp.azurewebsites.net/Home.php"> Home Page </a></li>
+    <li class="active"><a href = "http://bughelp.azurewebsites.net/bugs_page.php"> Bugs Page </a></li>
+</div>
+<div class="container">
+    <li class="active"><a href = "http://bughelp.azurewebsites.net/search.php"> Search Page </a></li>
+    <br />
+    <br />
+    <br />
+</div>
+
 <form method="post">
     <fieldset>
         <legend>Step 1: Please create a tag first: </legend>
