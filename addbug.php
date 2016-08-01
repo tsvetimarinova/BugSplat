@@ -51,6 +51,7 @@ if (isset($_POST['bttAdd'])) {
     $description = $_POST['description'];
     $id = $_SESSION['id'];
     $tagdescription = $_SESSION['tagname'];
+    $date = date("Y-m-d");
 
     $tagname = "SELECT * FROM tags WHERE tag_description = '".$tagdescription."'";
     $tag_res = $db->query($tagname);
@@ -61,7 +62,7 @@ if (isset($_POST['bttAdd'])) {
 
 
     //$insert5 = "INSERT INTO bugs (bug_name, bug_description, userID, tagID) VALUES ('".$bug_name."', '".$description."', '".$id."', '".$tag."')";
-    $insert5 = "insert into bugs values (NULL, '".$bug_name."', '".$description."', '".$id."', '".$tagID."')";
+    $insert5 = "insert into bugs values (NULL, '".$bug_name."', '".$description."', '".$id."', '".$tagID."', '".$date."')";
     $result5 = $db->query($insert5);
     if (!$result5) die ("Could not query: " . mysqli_error($db));
     echo 'Your bug is added to the database.';
