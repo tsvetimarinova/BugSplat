@@ -50,7 +50,7 @@ if (isset($_POST['bttAdd'])) {
     echo $id;
    /* $sql = "INSERT INTO bug_userprofile(Usr_User, Usr_Surname, Usr_Country, Usr_Bio, Usr_Password)
 VALUES('$name','$surname','$country','$bio','$password')"; */
-    $insert5 = "INSERT INTO bugs (bug_name, bug_description, uaerID, tagID) VALUES ('$bug_name', '$description', '$id', '$tag')";
+    $insert5 = "INSERT INTO bugs (bug_name, bug_description, userID, tagID) VALUES ('$bug_name', '$description', '$id', '$tag')";
     //$insert5 = "insert into bugs values (NULL, 'Some bug', 'This is a bug', '1', 'bug')";
     $result5 = $db->query($insert5);
     if (!$result5) die ("Could not query: " . mysqli_error());
