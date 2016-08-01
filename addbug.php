@@ -46,20 +46,19 @@ if (isset($_POST['bttAdd'])) {
     $description = $_POST['description'];
     $tag = $_POST['tag'];
     $id = $_SESSION['id'];
-    echo $bug_name;
-    echo $description;
-    echo $tag;
-    echo $id;
+
 
     $inserttag = "INSERT INTO tags VALUES (NULL, '".$tag."')";
     $resulttag = $db->query($inserttag);
     if (!$resulttag) die ("Could not query: " . mysqli_error($db));
     echo 'Your tag is added to the database.';
+    echo '<br />' ;
     $tagname = "SELECT * FROM tags WHERE tag_description = '".$tag."'";
     while ($tag471 = mysqli_fetch_assoc($tagname)){
         $tagID = $tag471['tagID'];
+        echo $tagID;
     }
-    echo $tagID;
+
 
     //$insert5 = "INSERT INTO bugs (bug_name, bug_description, userID, tagID) VALUES ('".$bug_name."', '".$description."', '".$id."', '".$tag."')";
     //$insert5 = "insert into bugs values (NULL, '".$bug_name."', '".$description."', '".$id."', '".$tag."')";
