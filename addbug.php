@@ -11,7 +11,7 @@
 
 <form method="post">
     <fieldset>
-        <legend>Add Bug</legend>
+        <legend>Step 2: Add Bug</legend>
         <table cellpadding="2" cellspacing="2" border="0">
             <tr>
                 <td>Bug name:</td>
