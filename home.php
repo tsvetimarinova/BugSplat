@@ -32,7 +32,10 @@
     <li class="active"><a href = "http://bughelp.azurewebsites.net/search.php"> Search Page </a></li>
     </br>
 </div>
-
+<div class="container">
+    <li class="active"><a href = "http://bughelp.azurewebsites.net/developer.php"> Developer Page </a></li>
+    </br>
+</div>
 
 <?php
 /*session_start();
