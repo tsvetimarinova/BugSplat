@@ -21,6 +21,8 @@ session_start();
 $userid = $_SESSION ['id'];
 $user = "SELECT * FROM users WHERE userID = '".$userid."'";
 $res = $db->query($user);
+echo 'Information:';
+echo '<br />';
 if (!$res) die ("Could not query: " . mysqli_error($db));
 while ($user1 = mysqli_fetch_assoc($res)) {
     echo "<br />";
@@ -31,7 +33,10 @@ while ($user1 = mysqli_fetch_assoc($res)) {
     echo 'Country: ' . $user1 ['country'];
     echo "<br />";
 }
-
+echo '<br />';
+echo '<br />';
+echo '<br />';
+echo 'Bugs: ';
 $query2 = "SELECT bug_name FROM bugs, users WHERE bugs.userID = users.userID AND users.userID = '".$userid."'";
 // execute the SQL query
 $result2 = $db->query($query2);
