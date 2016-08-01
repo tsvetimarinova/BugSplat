@@ -48,9 +48,9 @@ if (isset($_POST['bttAdd'])) {
     echo $description;
     echo $tag;
     echo $id;
-    $insertbug = "insert into bugs values (NULL, 'Some bug', 'This is a bug', '1', 'bug')";
-    $resultbug = $db->query($insertbug);
-    if (!$resultbug) die ("Could not query: " . mysqli_error());
+    $insert5 = "insert into bugs values (NULL, 'Some bug', 'This is a bug', '1', 'bug')";
+    $result5 = $db->query($insert5);
+    if (!$result5) die ("Could not query: " . mysqli_error());
     echo 'Your bug is added to the database.';
 
 }
