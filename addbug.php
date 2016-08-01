@@ -40,9 +40,9 @@ if (isset($_POST['bttAdd'])) {
     $bug_name = $_POST['bugname'];
     $description = $_POST['description'];
     $id = $_SESSION['id'];
+    $tagdescription = $_SESSION['tagname'];
 
-
-    $tagname = "SELECT * FROM tags WHERE tag_description = '".$tag."'";
+    $tagname = "SELECT * FROM tags WHERE tag_description = '".$tagdescription."'";
     while ($tag471 = mysqli_fetch_assoc($tagname)){
         $tagID = $tag471['tagID'];
         echo $tagID;
