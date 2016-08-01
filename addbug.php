@@ -1,33 +1,3 @@
-<form method="post">
-    <fieldset>
-        <legend>Add Bug</legend>
-        <table cellpadding="2" cellspacing="2" border="0">
-            <tr>
-                <td>Bug name:</td>
-                <td><input type="text" name="bugname"></td>
-            </tr>
-            <tr>
-                <td>Bug description:</td>
-            </tr>
-        </table>
-
-        <textarea name="description" cols="38.5" rows="5">
-
-        </textarea>
-        <table cellpadding="2" cellspacing="2" border="0">
-            <tr>
-                <td>Tag:</td>
-                <td><input type="text" name="tag"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" name="bttAdd" value="Add"></td>
-            </tr>
-        </table>
-    </fieldset>
-</form>
-
-
 <?php
 session_start();
 $db = new mysqli (
@@ -60,3 +30,35 @@ $result->close();
 // close connection to database
 $db->close();
 ?>
+
+
+<form method="post">
+    <fieldset>
+        <legend>Add Bug</legend>
+        <table cellpadding="2" cellspacing="2" border="0">
+            <tr>
+                <td>Bug name:</td>
+                <td><input type="text" name="bugname"></td>
+            </tr>
+            <tr>
+                <td>Bug description:</td>
+            </tr>
+        </table>
+
+        <textarea name="description" cols="38.5" rows="5">
+
+        </textarea>
+        <table cellpadding="2" cellspacing="2" border="0">
+            <tr>
+                <td>Tag:</td>
+                <td><input type="text" name="tag"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="bttAdd" value="Add"></td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+
+
