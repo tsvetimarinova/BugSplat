@@ -73,12 +73,7 @@ $db = new mysqli (
             echo $com1 ['com_description'];
             echo "<br />";
         }
-        $check = "SELECT * FROM comments, bugs WHERE bug_name = '" . $name . " ' AND comments.bugID = bugs.bugID";
-        $resultcheck = $db->query($check);
-        $rows = mysql_num_rows($resultcheck);
-        if ($rows == 0){
-            $randomcom = "INSERT INTO comments VALUES (NULL, 'I have the same problem', '".$date."',1 ,'".$bugid."' )";
-        }
+
 
 
         if (isset($_POST['bttCom'])) {
