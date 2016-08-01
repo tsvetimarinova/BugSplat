@@ -57,3 +57,10 @@ if (isset($_POST['bttTag'])) {
 
 
 ?>
+<form method="post">
+        <table cellpadding="2" cellspacing="2" border="0">
+            <tr>
+                <td><input type="submit" name="bttBack" value="Go Back"></td>
+            </tr>
+        </table>
+</form>
