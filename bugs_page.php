@@ -58,57 +58,10 @@ session_start();
         echo "<br />";
         $_SESSION ['name'] = $bug['bug_name'];
     }
-    /*for($i = 0; $i < $rows; ++$i){
-        $var = mysql_result($result, $i, 'bug_name') . '</br>';
-        //$_SESSION ['bug']= $var;
-        //echo $_SESSION ['bug'];
-        echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$var.'">'.$var.'</a>';
-        $_SESSION ['name'] = $var;
-    }*/
-
-
-   /* $var = 'Accidental semicolon';
-    $b = 'Curly braces';
-    echo '<a href="http://bughelp.azurewebsites.net/test.php?name='.$var.'">'.$var.'</a>';
-    echo '<br/>';
-    echo '<a href="http://bughelp.azurewebsites.net/test.php?name='.$b.'">Curly braces</a>';
-   */
-?>
-<!--<div class="container">
-    <div class="starter-template">
-
-        var=10;
-
-
-        <!-- Send the variables myNumber=1 and myFruit="orange" to the new PHP page...-->
-        <!--<a href="http://bughelp.azurewebsites.net/test.php?var">Send variables via URL!</a>
-
-
-        <!--<li><a href = "http://bughelp.azurewebsites.net/test.php"> Accidental semicolon </a></li> -->
-       <!-- <li><a href = "http://bughelp.azurewebsites.net/curly_braces.php"> Curly braces </a></li>
-    </div>
-</div>
--->
-<?php
 
 
 
-/*$query = "SELECT * FROM bugs";
-// execute the SQL query
-$result = mysql_query($query);
-if(!$result) die ("Could not query: " . mysql_error());
-$rows = mysql_num_rows($result);
-for($j = 0; $j < $rows; ++$j)
-{
-    // echo ' ' . mysql_result($result, $j, 'bug_name') . '</br>';
-    /* echo 'Description: ' . mysql_result($result, $j, 'bug_description') . '</br>'; */
-//}
-// iterate over $result object one $row at a time
-// use fetch_array() to return an associative array
-//while($row = $result->fetch_array()){
-//  // print out fields from row of data
-//echo $row ;
-//}
+
 $result->close();
 // close connection to database
 $db->close();
