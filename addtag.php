@@ -40,6 +40,7 @@ if (isset($_POST['bttTag'])) {
     echo 'Your tag is added to the database.';
     echo '<br />';
     echo '<a href="http://bughelp.azurewebsites.net/addbug.php">Next Step</a>';
+    $_SESSION['tagname'] = $tag;
 
 }
 
