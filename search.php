@@ -72,6 +72,9 @@ if (isset($_POST['bttS'])){
     }
 
 
+}
+
+
 if (isset($_POST['bttS1'])) {
     require 'connect.php';
     $search1 = $_POST ['search1'];
@@ -88,9 +91,6 @@ if (isset($_POST['bttS1'])) {
         echo "<br />";
 
     }
-}
-
-
 }
 
 
