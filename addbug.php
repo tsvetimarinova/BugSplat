@@ -29,7 +29,7 @@
 
 
 <?php
-
+session_start();
 $db = new mysqli (
     "us-cdbr-azure-west-c.cloudapp.net",
     "b4bbf8767a3b3c",
