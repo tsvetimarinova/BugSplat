@@ -72,7 +72,12 @@ $db = new mysqli (
             echo "<br />";
             echo $com1 ['com_description'];
             echo "<br />";
-
+        }
+        $check = "SELECT * FROM comments, bugs WHERE bug_name = '" . $name . " ' AND comments.bugID = bugs.bugID";
+        $resultcheck = $db->query($check);
+        $rows = mysql_num_rows($resultcheck);
+        if ($rows == 0){
+            $randomcom = "INSERT INTO comments VALUES (NULL, 'I have the same problem', '".$date."',1 ,'".$bugid."' )";
         }
 
 
@@ -85,12 +90,7 @@ $db = new mysqli (
             if (!$resultcom) die ("Could not query: " . mysql_error());
             echo 'Your comment is added to the database. Please refresh the page to see it.';
 
-            $check = "SELECT * FROM comments, bugs WHERE bug_name = '" . $name . " ' AND comments.bugID = bugs.bugID";
-            $resultcheck = $db->query($check);
-            $rows = mysql_num_rows($resultcheck);
-            if ($rows == 0){
-                $randomcom = "INSERT INTO comments VALUES (NULL, 'I have the same problem', '".$date."',1 ,'".$bugid."' )";
-            }
+
         }
     }
 
