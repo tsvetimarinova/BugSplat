@@ -37,6 +37,7 @@ if (isset($_POST['bttTag'])) {
     $inserttag = "INSERT INTO tags VALUES (NULL, '" . $tag . "')";
     $resulttag = $db->query($inserttag);
     if (!$resulttag) die ("Could not query: " . mysqli_error($db));
+    echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$bug['bug_name'].'">Next Step</a>';
     echo 'Your tag is added to the database.';
 }
 
