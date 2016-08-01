@@ -11,7 +11,7 @@
             </tr>
         </table>
 
-        <textarea name="comments" cols="38.5" rows="5">
+        <textarea name="description" cols="38.5" rows="5">
 
         </textarea>
         <table cellpadding="2" cellspacing="2" border="0">
@@ -26,3 +26,29 @@
         </table>
     </fieldset>
 </form>
+
+
+<?php
+
+$db = new mysqli (
+    "us-cdbr-azure-west-c.cloudapp.net",
+    "b4bbf8767a3b3c",
+    "7ae9ed4b",
+    "databasebug1300608"
+);
+
+
+if (isset($_POST['bttAdd'])) {
+
+    $bug_name = $_POST['bugname'];
+    $description = $_POST['description'];
+    $tag = $_POST['tag'];
+
+    $id = $_SESSION['id'];
+    $insertbug = "insert into bugs values (NULL, '".$bug_name."', '".$description."', '".$id."', '".$tag."')";
+    $resultbug = $db->query($insertbug);
+    if (!$resultbug) die ("Could not query: " . mysql_error());
+    echo 'Your bug is added to the database.';
+
+}
+?>
