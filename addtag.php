@@ -56,7 +56,7 @@ if (isset($_POST['bttTag'])) {
 }
 
 if (isset($_POST['bttBack'])) {
-    echo '<a href="http://bughelp.azurewebsites.net/bugs_page.php"></a>';
+    header('Location: bugs_page.php');
 }
 
 ?>
