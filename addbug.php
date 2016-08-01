@@ -66,6 +66,11 @@ if (isset($_POST['bttAdd'])) {
     if (!$result5) die ("Could not query: " . mysqli_error($db));
     echo 'Your bug is added to the database.';
 
+
+
+        $randomcom = "INSERT INTO comments VALUES (NULL, 'I have the same problem', '".$date."',1 ,'".$bugid."' )";
+        $resultrandom = $db->query($randomcheck);
+
 }
 
 $result->close();
