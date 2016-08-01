@@ -44,6 +44,7 @@ if (isset($_POST['bttAdd'])) {
 
     $tagname = "SELECT * FROM tags WHERE tag_description = '".$tagdescription."'";
     if (!$tagname) die ("Could not query: " . mysqli_error($db));
+    echo 'blah';
     while ($tag471 = mysqli_fetch_assoc($tagname)){
         $tagID = $tag471['tagID'];
         echo $tagID;
