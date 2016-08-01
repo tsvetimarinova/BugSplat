@@ -57,7 +57,6 @@ session_start();
         echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name='.$bug['bug_name'].'">'.$bug['bug_name'].'</a>';
         echo "<br />";
         $_SESSION ['name'] = $bug['bug_name'];
-
     }
     /*for($i = 0; $i < $rows; ++$i){
         $var = mysql_result($result, $i, 'bug_name') . '</br>';
