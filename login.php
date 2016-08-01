@@ -33,7 +33,7 @@ if (isset($_POST['bttReg'])){
     $country = $_POST['country'];
     $insertuser = "insert into users values (NULL, '".$fullname."','".$email."','".$country."','1',NULL,NULL,'".$username1."', '".$password1."')";
     $resultuser = $db->query($insertuser);
-    if (!$resultuser) echo "Error: " .mysqli_error();
+    if (!$resultuser) echo "Error: " .mysqli_error($db);
     else echo "You have completed the registration! ";
     //$result2 = mysqli_query($con, 'select * from users where username = "'.$username1.'"');
    // mysqli_query ($con, 'insert into users (userID, name, email, country, developer, admin, privID, username, password) values ("", "Ivan Petrov", "vankata@abv.bg", "Bangladesh", "1", "", "vankata1", "vanka")');
