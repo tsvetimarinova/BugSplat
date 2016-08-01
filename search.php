@@ -75,8 +75,8 @@ if (isset($_POST['bttS'])){
 if (isset($_POST['bttS1'])) {
     require 'connect.php';
     $search1 = $_POST ['search1'];
-    $query = "select * from bugs, users where users.name = '" . $search1 . "' and users.userID = bugs.userID";
-    $result2 = $db->query($query);
+    $query1 = "select * from bugs, users where users.name = '" . $search1 . "' and users.userID = bugs.userID";
+    $result2 = $db->query($query1);
     if (!$result2) echo "Error: " . mysql_error();
     echo "<br />";
     echo "<br />";
@@ -90,11 +90,7 @@ if (isset($_POST['bttS1'])) {
     }
 }
 
-   /* if (mysqli_num_rows($ser)==1){
-        $_SESSION['search'] = $search;
-        header('Location: bug_template_page.php');
-    }*/
-    //else echo "No match found.";
+
 }
 
 
