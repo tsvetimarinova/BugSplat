@@ -47,9 +47,8 @@ if (isset($_POST['bttAdd'])) {
     if (!$tagname) die ("Could not query: " . mysqli_error($db));
     while ($tag471 = mysqli_fetch_assoc($tag_res)){
         $tagID = $tag471['tagID'];
-        echo $tagID;
     }
-
+    echo $tagID;
 
     //$insert5 = "INSERT INTO bugs (bug_name, bug_description, userID, tagID) VALUES ('".$bug_name."', '".$description."', '".$id."', '".$tag."')";
     //$insert5 = "insert into bugs values (NULL, '".$bug_name."', '".$description."', '".$id."', '".$tag."')";
