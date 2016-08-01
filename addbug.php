@@ -15,16 +15,11 @@
         <textarea name="description" cols="38.5" rows="5">
 
         </textarea>
-        <table cellpadding="2" cellspacing="2" border="0">
-            <tr>
-                <td>Tag:</td>
-                <td><input type="text" name="tag"></td>
-            </tr>
             <tr>
                 <td></td>
                 <td><input type="submit" name="bttAdd" value="Add"></td>
             </tr>
-        </table>
+
     </fieldset>
 </form>
 
@@ -44,15 +39,9 @@ if (isset($_POST['bttAdd'])) {
 
     $bug_name = $_POST['bugname'];
     $description = $_POST['description'];
-    $tag = $_POST['tag'];
     $id = $_SESSION['id'];
 
 
-    $inserttag = "INSERT INTO tags VALUES (NULL, '".$tag."')";
-    $resulttag = $db->query($inserttag);
-    if (!$resulttag) die ("Could not query: " . mysqli_error($db));
-    echo 'Your tag is added to the database.';
-    echo '<br />' ;
     $tagname = "SELECT * FROM tags WHERE tag_description = '".$tag."'";
     while ($tag471 = mysqli_fetch_assoc($tagname)){
         echo $tag471['tagID'];
