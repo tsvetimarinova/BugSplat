@@ -51,7 +51,6 @@ if (isset($_POST['bttAdd'])) {
     $description = $_POST['description'];
     $id = $_SESSION['id'];
     $tagdescription = $_SESSION['tagname'];
-    $_SESSION['bugname1'] = $bug_name;
 
     $tagname = "SELECT * FROM tags WHERE tag_description = '".$tagdescription."'";
     $tag_res = $db->query($tagname);
@@ -65,7 +64,7 @@ if (isset($_POST['bttAdd'])) {
     $insert5 = "insert into bugs values (NULL, '".$bug_name."', '".$description."', '".$id."', '".$tagID."')";
     $result5 = $db->query($insert5);
     if (!$result5) die ("Could not query: " . mysqli_error($db));
-    header('Location: added.php');
+    echo 'Your bug is added to the database.';
 
 
 
