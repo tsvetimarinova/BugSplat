@@ -49,6 +49,8 @@ $db = new mysqli (
             echo "<br />";
             echo 'Name: ' . $bug1 ['name'];
             echo "<br />";
+            echo 'Date added: ' . $bug1 ['date'];
+            echo '<br />';
             echo 'Email: ' . $bug1 ['email'];
             echo "<br />";
             echo 'Country: ' . $bug1 ['country'];
