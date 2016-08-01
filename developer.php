@@ -37,6 +37,7 @@ echo '<br />';
 echo '<br />';
 echo '<br />';
 echo 'Bugs: ';
+echo '<br />';
 $query2 = "SELECT bug_name FROM bugs, users WHERE bugs.userID = users.userID AND users.userID = '".$userid."'";
 // execute the SQL query
 $result2 = $db->query($query2);
