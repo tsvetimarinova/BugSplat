@@ -15,6 +15,7 @@ $userid = $_SESSION ['id'];
 $user = "SELECT * FROM users, WHERE userID = '".$userid."'";
 $res = $db->query($user);
 if (!$res) die ("Could not query: " . mysqli_error($db));
+echo $userid;
 while ($user1 = mysqli_fetch_assoc($res)) {
     echo "<br />";
     echo 'Name: ' . $user1 ['name'];
