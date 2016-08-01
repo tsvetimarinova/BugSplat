@@ -50,11 +50,19 @@ if (isset($_POST['bttAdd'])) {
     echo $description;
     echo $tag;
     echo $id;
+
+    $inserttag = "INSERT INTO tags VALUES (NULL, '".$tag."')";
+    $resulttag = $db->query($inserttag);
+    if (!$resulttag) die ("Could not query: " . mysqli_error($db));
+    echo 'Your tag is added to the database.';
+    $tagname = "SELECT * FROM tags WHERE tag_description = '".$tag."'";
+    echo $tagname;
+
     //$insert5 = "INSERT INTO bugs (bug_name, bug_description, userID, tagID) VALUES ('".$bug_name."', '".$description."', '".$id."', '".$tag."')";
-    $insert5 = "insert into bugs values (NULL, '".$bug_name."', '".$description."', '".$id."', '".$tag."')";
-    $result5 = $db->query($insert5);
-    if (!$result5) die ("Could not query: " . mysqli_error($db));
-    echo 'Your bug is added to the database.';
+    //$insert5 = "insert into bugs values (NULL, '".$bug_name."', '".$description."', '".$id."', '".$tag."')";
+    //$result5 = $db->query($insert5);
+    //if (!$result5) die ("Could not query: " . mysqli_error($db));
+    //echo 'Your bug is added to the database.';
 
 }
 
