@@ -10,7 +10,7 @@
 
 <form method="post">
     <fieldset>
-        <legend>Search:</legend>
+        <legend>Search by tags:</legend>
         <table cellpadding="1" cellspacing="1" border="0">
             <tr>
                 <td></td>
@@ -23,6 +23,25 @@
         </table>
     </fieldset>
 </form>
+
+<form method="post">
+    <fieldset>
+        <legend>Search by author:</legend>
+        <table cellpadding="1" cellspacing="1" border="0">
+            <tr>
+                <td></td>
+                <td><input type="text" name="search1"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="bttS1" value="Search"></td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</html>
+
+
 </html>
 
 
@@ -52,6 +71,24 @@ if (isset($_POST['bttS'])){
 
     }
 
+
+if (isset($_POST['bttS1'])) {
+    require 'connect.php';
+    $search1 = $_POST ['search1'];
+    $query = "select * from bugs, users where users.name = '" . $search1 . "' and users.userID = bugs.userID";
+    $result2 = $db->query($query);
+    if (!$result2) echo "Error: " . mysql_error();
+    echo "<br />";
+    echo "<br />";
+    echo "<br />";
+    echo "Results: ";
+    echo "<br />";
+    while ($user = mysqli_fetch_assoc($result2)) {
+        echo '<a href="http://bughelp.azurewebsites.net/bug_template_page.php?name=' . $user['bug_name'] . '">' . $user['bug_name'] . '</a>';
+        echo "<br />";
+
+    }
+}
 
    /* if (mysqli_num_rows($ser)==1){
         $_SESSION['search'] = $search;
