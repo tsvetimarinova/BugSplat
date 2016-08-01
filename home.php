@@ -56,6 +56,7 @@ echo 'Welcome, '.$_SESSION['username'];*/
 
 <div class="container">
     <li class="active"><a href = "http://bughelp.azurewebsites.net/bugs_page.php"> Bugs Page </a></li>
+    <li class="active"><a href = "http://bughelp.azurewebsites.net/addbug.php"> Add Bug</a></li>
     <br />
 </div>
 
