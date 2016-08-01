@@ -1,3 +1,13 @@
+<div class="container">
+    <li class="active"><a href = "http://bughelp.azurewebsites.net/Home.php"> Home Page </a></li>
+    <li class="active"><a href = "http://bughelp.azurewebsites.net/bugs_page.php"> Bugs Page </a></li>
+</div>
+<div class="container">
+    <li class="active"><a href = "http://bughelp.azurewebsites.net/search.php"> Search Page </a></li>
+    <br />
+    <br />
+    <br />
+</div>
 
 <form method="post">
     <fieldset>
@@ -48,7 +58,7 @@ if (isset($_POST['bttAdd'])) {
     while ($tag471 = mysqli_fetch_assoc($tag_res)){
         $tagID = $tag471['tagID'];
     }
-    echo $tagID;
+
 
     //$insert5 = "INSERT INTO bugs (bug_name, bug_description, userID, tagID) VALUES ('".$bug_name."', '".$description."', '".$id."', '".$tag."')";
     $insert5 = "insert into bugs values (NULL, '".$bug_name."', '".$description."', '".$id."', '".$tagID."')";
