@@ -77,7 +77,7 @@ if (isset($_POST['bttS1'])) {
     $search1 = $_POST ['search1'];
     $query1 = "select * from bugs, users where users.name = '" . $search1 . "' and users.userID = bugs.userID";
     $result2 = $db->query($query1);
-    if (!$result2) echo "Error: " . mysql_error();
+    if (!$result2) echo "Error: " . mysqli_error($db);
     echo "<br />";
     echo "<br />";
     echo "<br />";
