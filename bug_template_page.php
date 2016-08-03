@@ -83,7 +83,6 @@ $db = new mysqli (
             echo "Comment: " .$com1 ['com_description'];
             echo "<br />";
             echo "<br />";
-            echo "<br />";
         }
 
 
