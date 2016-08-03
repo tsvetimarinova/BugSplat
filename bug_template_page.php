@@ -77,8 +77,12 @@ $db = new mysqli (
             $bugid = $com1['bugID'];
             echo "<br />";
             echo "Date: " .$com1 ['com_date'];
+            echo "<br />";
             echo "Name: " .$com1 ['name'];
+            echo "<br />";
             echo "Comment: " .$com1 ['com_description'];
+            echo "<br />";
+            echo "<br />";
             echo "<br />";
         }
 
