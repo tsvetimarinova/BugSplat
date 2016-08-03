@@ -3,6 +3,9 @@
 <div class="container">
     <li class="active"><a href = "http://bughelp.azurewebsites.net/Home.php"> Home Page </a></li>
     <li class="active"><a href = "http://bughelp.azurewebsites.net/bugs_page.php"> Bugs Page </a></li>
+    </br>
+    <li class="active"><a href = "http://bughelp.azurewebsites.net/developer.php"> Developer Page </a></li>
+    </br>
     <br />
     <br />
     <br />
