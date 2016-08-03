@@ -65,7 +65,7 @@ $db = new mysqli (
         }
 
 
-        $com = "SELECT * FROM comments, bugs WHERE bug_name = '" . $name . " ' AND comments.bugID = bugs.bugID";
+        $com = "SELECT * FROM comments, bugs, users WHERE bug_name = '" . $name . " ' AND comments.bugID = bugs.bugID AND users.userID = bugs.userID";
         $com_res = $db->query($com);
         if (!$com_res) die ("Could not query: " . mysql_error());
         //$rows1 = mysql_num_rows($com);
@@ -76,7 +76,7 @@ $db = new mysqli (
         while ($com1 = mysqli_fetch_assoc($com_res)) {
             $bugid = $com1['bugID'];
             echo "<br />";
-            echo $com1 ['com_description'];
+            echo $com1 ['com_date'] ." ".$com1 ['username'] .": ".$com1 ['com_description'];
             echo "<br />";
         }
 
