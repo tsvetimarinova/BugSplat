@@ -13,14 +13,11 @@ if ($conn->connect_error){
 }
 /*Populates sql table*/
 $sql = "
-INSERT INTO Tags (tagID, tag_description, bugID) VALUES ('T001', 'semicolon', 'B001');
-INSERT INTO Tags (tagID, tag_description, bugID) VALUES ('T002', 'braces', 'B002');
-INSERT INTO Tags (tagID, tag_description, bugID) VALUES ('T003', 'break-statement', 'B003');
-INSERT INTO Tags (tagID, tag_description, bugID) VALUES ('T004', '', 'B004');
-INSERT INTO Tags (tagID, tag_description, bugID) VALUES ('T005', '', 'B005');
-INSERT INTO Tags (tagID, tag_description, bugID) VALUES ('T006', '', 'B006');
-INSERT INTO Tags (tagID, tag_description, bugID) VALUES ('T007', '', 'B007');
-INSERT INTO Tags (tagID, tag_description, bugID) VALUES ('T008', '', 'B008');
+INSERT INTO Tags (tagID, tag_description) VALUES ('1', 'semicolon');
+INSERT INTO Tags (tagID, tag_description) VALUES ('2', 'braces');
+INSERT INTO Tags (tagID, tag_description) VALUES ('3', 'break-statement');
+INSERT INTO Tags (tagID, tag_description) VALUES ('4', 'problem');
+INSERT INTO Tags (tagID, tag_description) VALUES ('5', 'help');
 
 ";
 
