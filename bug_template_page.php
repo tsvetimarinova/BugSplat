@@ -76,7 +76,9 @@ $db = new mysqli (
         while ($com1 = mysqli_fetch_assoc($com_res)) {
             $bugid = $com1['bugID'];
             echo "<br />";
-            echo $com1 ['com_date'] ." ".$com1 ['username'] .": ".$com1 ['com_description'];
+            echo "Date: " .$com1 ['com_date'];
+            echo "Name: " .$com1 ['name'];
+            echo "Comment: " .$com1 ['com_description'];
             echo "<br />";
         }
 
