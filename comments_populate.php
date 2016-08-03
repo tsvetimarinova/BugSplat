@@ -13,11 +13,11 @@ if ($conn->connect_error){
 }
 /*Populates sql table*/
 $sql = "
-    INSERT INTO Comments (comID, description, com_date, userID, bugID) VALUES ('C001', 'I had the same problem. It's hard to find them., '2016-07-19', 'U003', 'B001');
-    INSERT INTO Comments (comID, description, com_date, userID, bugID) VALUES ('C002', 'It's not very often when I forget to put curly braces but I usually forget to close them.', '2016-08-02', 'U005', 'B002');
-    INSERT INTO Comments (comID, description, com_date, userID, bugID) VALUES ('C003', 'I always forget the break statemnts.', '2016-07-24', 'U002', 'B003');
-    INSERT INTO Comments (comID, description, com_date, userID, bugID) VALUES ('C004', 'Some comment.', '2016-07-27', 'U002', 'B007');
-    INSERT INTO Comments (comID, description, com_date, userID, bugID) VALUES ('C005', 'Another comment.', '2016-08-04', 'U004', 'B005');
+    INSERT INTO Comments (comID, description, com_date, userID, bugID) VALUES ('1', 'I had the same problem. It's hard to find them., '2016-07-19', 'U003', 'B001');
+    INSERT INTO Comments (comID, description, com_date, userID, bugID) VALUES ('11', 'It's not very often when I forget to put curly braces but I usually forget to close them.', '2016-08-02', 'U005', 'B002');
+    INSERT INTO Comments (comID, description, com_date, userID, bugID) VALUES ('21', 'I always forget the break statemnts.', '2016-07-24', 'U002', 'B003');
+    INSERT INTO Comments (comID, description, com_date, userID, bugID) VALUES ('31', 'Some comment.', '2016-07-27', 'U002', 'B007');
+    INSERT INTO Comments (comID, description, com_date, userID, bugID) VALUES ('41', 'Another comment.', '2016-08-04', 'U004', 'B005');
 
 ";
 
