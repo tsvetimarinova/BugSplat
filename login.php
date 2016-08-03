@@ -17,11 +17,6 @@ if (isset($_POST['bttLogin'])){
         $_SESSION['username'] = $username;
         header('Location: home.php');
     }
-   /* if (mysqli_num_rows($result)==1){
-        $_SESSION['username'] = $username;
-        header('Location: home.php');
-    }
-    else echo "Account is invalid";*/
 }
 
 
@@ -35,23 +30,7 @@ if (isset($_POST['bttReg'])){
     $resultuser = $db->query($insertuser);
     if (!$resultuser) echo "Error: " .mysqli_error($db);
     else echo "You have completed the registration! ";
-    //$result2 = mysqli_query($con, 'select * from users where username = "'.$username1.'"');
-   // mysqli_query ($con, 'insert into users (userID, name, email, country, developer, admin, privID, username, password) values ("", "Ivan Petrov", "vankata@abv.bg", "Bangladesh", "1", "", "vankata1", "vanka")');
-    /*if (mysqli_num_rows($result2)==1 ){
-        echo "Username already exists.";
-    } else {
-        $password1 = $_POST['password1'];
-        $fullname = $_POST['fullname'];
-        $email = $_POST['email'];
-        $country = $_POST['country'];
-        $result1 = mysql_query($con, 'insert into users (userID, name, email, country, developer, admin, privID, username, password) values("U007", "'.$fullname.'", "'.$email.'","'.$country.'","1","0", "PR01", "'.$username1.'", "'.$password1.'")');
-        if (!$result1) die ("Could not query: " . mysql_error());
-        else echo "Success";
-        mysql_close($con);
-        $_SESSION['username1'] = $username1;
-       // header('Location: home_page.html');
-    }*/
-}
+ }
 ?>
 
 
